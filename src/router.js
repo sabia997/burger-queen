@@ -1,24 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
 
 //Pages
-import Home from './componenents/home/Home';
-import Register from './componenents/register/Register';
-import Waitress from './componenents/waitress/Waitress';
-import Cooker from './componenents/cooker/Cooker';
+import { Home } from './componenents/home/Home';
+import { Register } from './componenents/register/Register';
+//import Waitress from './componenents/waitress/Waitress';
+//import Cooker from './components/cooker/Cooker';
 
-export default class Routes extends React.Component {
-    render(){
-      return (
-        <Switch>
-          <Router>
-            <Route exact path='/' component={Home} />
-          </Router>
-          <Router>
-            <Route exact path='/register' component={Register} />
-          </Router>
-        </Switch>
-      ) 
-    }
-  }
-  
+export default function Routes() {
+  return (
+    <Router>
+        <BrowserRouter> 
+            <Switch>
+                <Route exact path="/" component = { Home }>
+                </Route>
+                <Route path="/register" component = { Register }>
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    </Router>
+  );
+}
