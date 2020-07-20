@@ -1,15 +1,26 @@
 import  React from 'react';
 import './App.css';
-import Header from './componenents/Header';
-import Main from './componenents/Main';
+import Home from "./componenents/home/Home";
+import Register from './componenents/register/Register';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 export default class App extends React.Component {
   render(){
     return (
-      <React.Fragment>
-        <Header/>
-        <Main/>
-      </React.Fragment>
+      <Router>
+        <Switch>
+
+          <Route path="/">
+            <Home />
+          </Route>
+
+          <Route path="/register">
+            <Register />
+          </Route>
+          
+        </Switch>
+      </Router> 
     ) 
   }
 }

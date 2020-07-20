@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './home/main/login';
+import Login from './main/login';
 
 export default class Main extends React.Component {
 
