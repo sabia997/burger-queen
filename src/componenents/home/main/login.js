@@ -31,11 +31,11 @@ return(
     <main>
     <Logo/>
     <div>
-        <form onSubmit={handleLogin} >
+        <form onSubmit={handleLogin} className="login" >
             <input type='text' name = 'email' placeholder ='Email' className = 'input-login'/>
             <input type='password'name = 'password' placeholder = 'Senha' className = 'input-login' />
             <button type = 'submit' className = 'input-submit'>Entrar</button>
-            <Link to="/signup">registrar-se</Link>
+            <Link to="/signup">Não tem uma conta? Registre-se</Link>
         </form>
     </div>
     </main>

@@ -21,13 +21,13 @@ const SignUp  = ({ history }) => {
         return(
             <main>
             <Logo/>
-                <form onSubmit={ handleSignUp }>
+                <form onSubmit={ handleSignUp } className="login">
                     <p>Register</p>
                 <input type='text' name = 'email' placeholder ='Email' className = 'input-login'/>
                 <input type='password'name = 'password' placeholder = 'Senha' className = 'input-login' />
                 <button type = 'submit' className = 'input-submit'>Registrar</button>
                 </form>
-                <Link to="/home">Voltar para a página</Link>
+                <Link to="/home">Voltar para a página de login</Link>
             </main>
         );
     } 
