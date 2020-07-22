@@ -7,7 +7,6 @@ export const Cooker = () =>(
     <React.Fragment>
         <header>
             <Header/>
-            <button onClick = {() => app.auth().signOut()}>Sair</button>
         </header>
     </React.Fragment>        
 );

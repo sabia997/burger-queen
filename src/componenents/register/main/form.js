@@ -24,11 +24,10 @@ const SignUp  = ({ history }) => {
                 <form onSubmit={ handleSignUp }>
                     <p>Register</p>
                 <input type='text' name = 'email' placeholder ='Email' className = 'input-login'/>
-                <input type='password'name = 'senha' placeholder = 'Senha' className = 'input-login' />
-                <input type='text'name = 'equipe' placeholder = 'Equipe' className = 'input-login' />
+                <input type='password'name = 'password' placeholder = 'Senha' className = 'input-login' />
                 <button type = 'submit' className = 'input-submit'>Registrar</button>
                 </form>
-                <Link to="/home">Voltar para a página de login</Link>
+                <Link to="/home">Voltar para a página</Link>
             </main>
         );
     } 
