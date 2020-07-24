@@ -1,5 +1,4 @@
 import React from "react";
-//import firebaseConfig from "../../firebase";
 
 const Waitress = () => {
   return (

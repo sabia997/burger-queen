@@ -2,10 +2,10 @@ import React from "react";
 //import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //Pages
-import Login from './componenents/home/main/login';
-import SignUp from './componenents/register/main/form';
-import Waitress from './componenents/waitress/Waitress';
-//import Cooker from './components/cooker/Cooker';
+import Login from './componenents/home/login';
+import SignUp from './componenents/signUp/SignUp';
+import Waitress from './componenents/serviceTeam/Waitress';
+//import Cooker from './components/kitchen/Cooker';
 import PrivateRoute from './privateRouter';
 import { AuthProvider } from "./componenents/home/auth";
 
