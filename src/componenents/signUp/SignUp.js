@@ -4,16 +4,22 @@ import firebaseConfig from '../../firebase';
 import Logo from '../logo/logo';
 import SignUpForm from '../form/signInForm';
 import { Link } from 'react-router-dom';
+import setUserTeam from './SetUserTeam';
 
 const SignUp  = ({ history }) => {
     const handleSignUp = useCallback(async event => {
     event.preventDefault();
-    const { email, password } = event.target.elements;
+    const { email, password, select } = event.target.elements;
     try {
         await firebaseConfig
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value)
-        history.push('/waitress');
+        setUserTeam(select.value)
+        if(select.value === 'kitchen'){
+            history.push('/kitchen');
+        }else {
+            history.push('/waitress');
+        } 
     } catch (error) {
         alert(error);
     }
@@ -28,6 +34,7 @@ const SignUp  = ({ history }) => {
                     <form onSubmit={handleSignUp} className="login">
                         <SignUpForm/>
                     </form>
+                    
                     <Link to="/home">Voltar para a página de login</Link>
                 </main>
             </>
