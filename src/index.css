@@ -37,3 +37,63 @@
     font-size: 20px;
     font-weight: bolder;
 }
+.input-pedido {
+    display: flex;
+    margin-top: 5%;
+    width: 65%;
+    background-color: #5DB075;
+    color: white;
+    border: 8px solid;
+    border-radius: 25px;
+    padding: 1.7%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.menu-pedidos {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    
+}
+.menu-opcao {
+    display: flex;
+    padding: 5%
+
+}
+.opcao2 {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 0%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.checkOptions {
+    padding: 10px;
+}
+.inserir-pedido {
+    display: flex;
+    margin-left: 16%;
+    margin-top: 3%;
+    width: 152px;
+    background-color: white;
+    color: #5DB075;
+    border: 1px solid #5DB075;
+    border-radius: 25px;
+    padding: 1.7%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.mesa {
+    background-color: #bae86b;
+    border-radius: 18px;
+    margin-top: 200px;
+}
+.garçon {
+    display: flex;
+    flex-direction: initial;
+}
+
