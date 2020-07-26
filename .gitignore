@@ -68,8 +68,8 @@ node_modules/
 firebase.js
 
 # build 
-build
+.build
 
 #node_modules
-node_modules
+.node_modules
 
