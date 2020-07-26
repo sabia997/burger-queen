@@ -26,18 +26,21 @@ const SignUp  = ({ history }) => {
 }, [history]);
 
         return(
-            <>
-                <header>
-                    <Logo/>
-                </header>
-                <main>
-                    <form onSubmit={handleSignUp} className="login">
-                        <SignUpForm/>
-                    </form>
-                    
-                    <Link to="/home">Voltar para a página de login</Link>
-                </main>
-            </>
+            <React.Fragment>
+                <div className="position-screen">
+                    <header>
+                        <Logo/>
+                    </header>
+                    <main>
+                        <form onSubmit={handleSignUp} className="login">
+                            <SignUpForm/>
+                        </form>
+                        <div className="link">
+                            <Link className="link" to="/home">Voltar para a página de login</Link>
+                        </div>
+                    </main>
+                </div>
+            </React.Fragment>
         );
     } 
 

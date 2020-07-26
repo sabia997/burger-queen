@@ -47,15 +47,17 @@ const Login = ({
 
     return(
         <React.Fragment>
-            <header>
-                <Logo/>
-            </header>
-            <main>
-                <form onSubmit={handleLogin} className="login">
-                    <LoginForm/>
-                </form>
-                <Link to="/SignUp">Não tem conta? Registre-se aqui!</Link>
-            </main>
+            <div className="position-screen">
+                <header>
+                    <Logo/>
+                </header>
+                <main>
+                    <form onSubmit={handleLogin} className="login">
+                        <LoginForm/>
+                    </form>
+                    <Link className="link" to="/SignUp">Não tem conta? Registre-se aqui!</Link>
+                </main>
+            </div>
         </React.Fragment>
     );
 

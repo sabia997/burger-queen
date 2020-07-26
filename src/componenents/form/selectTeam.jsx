@@ -1,10 +1,13 @@
 import React from 'react';
 
 const SelectTeam = () => (
-    <select name="select">
-        <option name="kitchen" value="kitchen"> Kitchen </option> 
-        <option name="service" value="service">Service Team</option>
-    </select>
+    <React.Fragment>
+        <p className="text">Selecione sua equipe:</p>
+        <select className="select-team" name="select">
+            <option name="kitchen" value="kitchen">Cozinha</option> 
+            <option name="service" value="service">Time de Serviço</option>
+        </select>
+    </React.Fragment>
 );
 
 export default SelectTeam;

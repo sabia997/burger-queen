@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
 }
 
 .input-login {
@@ -26,6 +25,18 @@
     padding: 8%;
 }
 
+.select-team {
+    margin-top: 5%;
+    width: 55%;
+    background-color: #5DB075;
+    color: white;
+    border: 8px solid;
+    border-radius: 25px;
+    padding: 1.7%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 .input-submit {
     margin-top: 5%;
     width: 45%;
@@ -36,4 +47,49 @@
     padding: 1.7%;
     font-size: 20px;
     font-weight: bolder;
+}
+
+.link {
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+@media  screen and (min-width: 1366px) {
+    .position-screen {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media  screen and (max-width: 400px) {  
+    .input-login {
+        width: 50%;    
+    }
+    
+    .input-submit {
+        width: 30%;
+    }
+
+    .buda-logo {
+        width: 30%;
+    }
+
+    .name-logo {
+        width: 60%;
+    }
+
 }
