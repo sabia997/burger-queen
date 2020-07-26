@@ -66,3 +66,10 @@ node_modules/
 
 # firebase configuration 
 firebase.js
+
+# build 
+build
+
+#node_modules
+node_modules
+
