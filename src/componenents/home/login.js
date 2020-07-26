@@ -1,35 +1,52 @@
-import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect, Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { withRouter, Link } from 'react-router-dom';
 import firebaseConfig from '../../firebase';
-import { AuthContext } from './auth';
 import Logo from '../logo/logo';
 import LoginForm from '../form/Loginform';
 
-const Login = ({history}) => {
-const handleLogin = useCallback(
-    async event => {
-        event.preventDefault();
-        const {email, password} = event.target.elements;
-        try {
-        await firebaseConfig
-        .auth()
-        .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/")
-        } catch(error) {
-            alert(error);
-        }
-    },
-    [history]
-);
+const Login = ({
+        history
+    }) => {
+        const handleLogin = useCallback(
+            async event => {
+                    event.preventDefault();
+                    const {
+                        email,
+                        password
+                    } = event.target.elements;
+                    try {
+                        await firebaseConfig
+                            .auth()
+                            .signInWithEmailAndPassword(email.value, password.value)
+                        const db = firebaseConfig.firestore();
+                        try {
+                            const user = firebaseConfig.auth().currentUser;
+                            db.collection('users_teams')
+                                .where('user', '==', user.uid)
+                                .get()
+                                .then(function (docs) {
+                                    docs.forEach(function (doc) {
+                                        if (doc.data().team === "kitchen") {
+                                            history.push("/kitchen")
+                                        } else {
+                                            history.push("/waitress")
+                                        }
+                                    })
+                                })
+                        } catch (erro) {
+                            console.log(erro);
+                        }
 
-    const{currentUser} = useContext(AuthContext);
+                    } catch (error) {
+                        alert(error);
+                    }
+                },
 
-    if (currentUser){
-        return <Redirect to="/waitress"/>
-    }
+                [history]
+        );
 
     return(
-        <>
+        <React.Fragment>
             <header>
                 <Logo/>
             </header>
@@ -39,7 +56,7 @@ const handleLogin = useCallback(
                 </form>
                 <Link to="/SignUp">Não tem conta? Registre-se aqui!</Link>
             </main>
-        </>
+        </React.Fragment>
     );
 
 };

@@ -1,5 +1,4 @@
 import React from "react";
-//import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //Pages
 import Login from './componenents/home/login';
@@ -13,13 +12,13 @@ const App = () => {
     return (
       <AuthProvider>
         <Router>
-          <div>
+          <React.Fragment>
             <PrivateRoute exact path="/waitress" component = { Waitress } />
-            <PrivateRoute exact path="/kitchen" component = { Cooker } />
+            <PrivateRoute path="/kitchen" component = { Cooker } />
             <Route exact path="/" component = { Login } />
             <Route exact path="/home" component = { Login } />
             <Route exact path="/signup" component = { SignUp } />
-          </div>
+          </React.Fragment>
         </Router>
       </AuthProvider>
     );

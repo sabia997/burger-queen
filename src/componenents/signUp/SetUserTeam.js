@@ -1,4 +1,3 @@
-//import React from 'react';
 import firebaseConfig from '../../firebase';
 
 const setUserTeam = ( async value => {
@@ -6,7 +5,7 @@ const setUserTeam = ( async value => {
     try {
             db.collection('users_teams').add({
             user: firebaseConfig.auth().currentUser.uid,
-            text: value,
+            team: value,
             date: new Date().toLocaleString(),
         });
     } catch (erro) {

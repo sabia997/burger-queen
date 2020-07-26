@@ -17,7 +17,7 @@ const SignUp  = ({ history }) => {
         setUserTeam(select.value)
         if(select.value === 'kitchen'){
             history.push('/kitchen');
-        }else {
+        } else {
             history.push('/waitress');
         } 
     } catch (error) {
