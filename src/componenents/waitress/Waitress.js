@@ -1,6 +1,11 @@
 import React, {useState} from "react";
-import {OptionsLanche, OptionsAcomp, OptionsBebidas, OptionsCafe}from './options'
+import OptionsLanche from './opcoes/OptionsLanche'
+import OptionsAcomp from './opcoes/OptionsAcomp'
+import OptionsCafe from './opcoes/OptionsCafe'
+import OptionsBebidas from './opcoes/OptionsBebidas'
 import {Mesa} from './mesa'
+
+
 const Waitress = () => {
   const [showLanche, setShowLanche] = useState(false)
   const [showAcomp, setShowAcomp] = useState(false)
@@ -60,7 +65,7 @@ const Waitress = () => {
         { showBebidas ? <OptionsBebidas /> : null }
 
       <div className = 'menu-opcao'>
-        <button onClick = {showOptionsCafe} type = 'submit' className = 'input-pedido'>café da manhã</button>
+        <button onClick = {showOptionsCafe} type = 'submit' className = 'input-pedido'>Café da manhã</button>
         <img src = {require("./icones/Coffee.png")}  className ='icone' alt="ícone café"/>
       </div>
       <div  >

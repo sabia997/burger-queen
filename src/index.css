@@ -39,8 +39,10 @@
 }
 .input-pedido {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 5%;
-    width: 65%;
+    width: 41%;
     background-color: #5DB075;
     color: white;
     border: 8px solid;
@@ -76,6 +78,8 @@
 }
 .inserir-pedido {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 16%;
     margin-top: 3%;
     width: 152px;
@@ -86,6 +90,7 @@
     padding: 1.7%;
     font-size: 20px;
     font-weight: bolder;
+    text-align: center;
 }
 .mesa {
     background-color: #bae86b;
@@ -96,4 +101,9 @@
     display: flex;
     flex-direction: initial;
 }
-
+.icone {
+    padding: 0%;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 10%;
+}
