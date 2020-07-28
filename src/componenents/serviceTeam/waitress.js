@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import firebaseConfig from '../../firebase';
+import { slide as Menu } from 'react-burger-menu'
 import ImgHamburger from './menuIcons/hamburger';
 import ImgFrenchFries from './menuIcons/frenchFries';
 import ImgSoda from './menuIcons/soda';
@@ -61,7 +62,9 @@ const Waitress = ({ history }) => {
     return (
         <React.Fragment>
             <header>
-                <button onClick={handleLogout} className='logout'>SAIR</button>
+                <Menu>
+                    <button onClick={handleLogout} className='menu-logout'>Sair</button>
+                </Menu>  
             </header>
             <main className='waitress'>
                 <div className="menu-options">
