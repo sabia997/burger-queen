@@ -1,3 +1,5 @@
+/*Login and SignUp*/
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -63,6 +65,64 @@
     font-weight: bolder;
     display: flex;
     justify-content: center;
+}
+
+/*Waitress*/
+
+.waitress {
+    display: flex;
+    flex-direction: inherit;
+}
+
+.input-request {
+    width: 300px;
+    background-color: #5DB075;
+    color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.menu-option {
+    display: flex;
+    flex-direction:inherit; 
+    justify-content: space-between;
+    width: 50%;
+}
+
+.icon {
+    width: 25%;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 0%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.checkOptions {
+    padding: 10px;
+    width: 100%;
+
+}
+
+.request-resume {
+    background-color: #D0FF80;
+    height: 500px;
+    margin-top: 17%;
+
+}
+
+.total-request {
+    width: 55%;
+    margin-right: 5%;
 }
 
 @media  screen and (min-width: 1366px) {
