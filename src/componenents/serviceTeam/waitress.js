@@ -64,35 +64,34 @@ const Waitress = ({ history }) => {
                 <button onClick={handleLogout} className='logout'>SAIR</button>
             </header>
             <main className='waitress'>
+                <div className="menu-options">
+                    <section className='menu-option'>
+                        <button onClick={ShowhamburgerOptions} type='submit' className='input-request'>Lanches</button>
+                        <ImgHamburger />
+                    </section>
+                    {HamburgerOptions ? <HamburgerOptionsView /> : null}
 
-                <section className='menu-option'>
-                    <button onClick={ShowhamburgerOptions} type='submit' className='input-request'>Lanches</button>
-                    <ImgHamburger />
-                </section>
-                {HamburgerOptions ? <HamburgerOptionsView /> : null}
+                    <section className='menu-option'>
+                        <button onClick={ShowSideDishesOptions} type='submit' className='input-request'>Acompanhamentos</button>
+                        <ImgFrenchFries />
+                    </section>
+                    {SideDishesOptions ? <SideDishesOptionsView /> : null}
 
-                <section className='menu-option'>
-                    <button onClick={ShowSideDishesOptions} type='submit' className='input-request'>Acompanhamentos</button>
-                    <ImgFrenchFries />
-                </section>
-                {SideDishesOptions ? <SideDishesOptionsView /> : null}
+                    <section className='menu-option'>
+                        <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Lanches</button>
+                        <ImgSoda />
+                    </section>
+                    {DrinksOptions ? <DrinksOptionsView /> : null}
 
-                <section className='menu-option'>
-                    <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Lanches</button>
-                    <ImgSoda />
-                </section>
-                {DrinksOptions ? <DrinksOptionsView /> : null}
-
-                <section className='menu-option'>
-                    <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Acompanhamentos</button>
-                    <ImgCoffee />
-                </section>
-                {BreakFastOptions ? <BreakFastOptionsView /> : null}
-
+                    <section className='menu-option'>
+                        <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Acompanhamentos</button>
+                        <ImgCoffee />
+                    </section>
+                    {BreakFastOptions ? <BreakFastOptionsView /> : null}
+                </div>
                 <section className='total-requests'>
                     <Request />
                 </section>
-                
             </main>
         </React.Fragment>
     );
