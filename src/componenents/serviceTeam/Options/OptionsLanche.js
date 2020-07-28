@@ -14,8 +14,7 @@ render(){
             <div className =  "checkOptions">
                 <input type="checkbox" name="HamburgerDuplo" value="10" />
                 <label for="HamburgerDuplo"> Hambúrguer Duplo R$ 15,00</label>
-            </div>
-            <input type="submit" value="Inserir pedido" className = 'inserir-pedido' />
+            </div>         
         </div>
             )
         }

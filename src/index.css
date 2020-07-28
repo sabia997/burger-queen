@@ -64,6 +64,84 @@
     display: flex;
     justify-content: center;
 }
+.input-pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    width: 61%;
+    background-color: #5DB075;
+    color: white;
+    border: 8px solid;
+    border-radius: 25px;
+    padding: 1.7%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.inserir-pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    background-color: white;
+    color: #5DB075;
+    border: 1px solid #5DB075;
+    border-radius: 25px;
+    padding: 1.7%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.menu-pedidos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.menu-opcao {
+    display: flex;
+    padding: 5%
+
+}
+.opcao2 {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    margin-left: 40px;
+    margin-top: 0%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.checkOptions {
+    padding: 10px;
+    width: 100%;
+
+}
+
+.mesa {
+    background-color: #D0FF80;
+    height: 500px;
+    margin-top: 17%;
+
+}
+.garçon {
+    display: flex;
+    flex-direction: initial;
+}
+.icone {
+    padding: 0%;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 10%;
+}
+.total-pedidos {
+    width: 55%;
+    margin-right: 5%;
+}
+
 
 @media  screen and (min-width: 1366px) {
     .position-screen {

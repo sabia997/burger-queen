@@ -13,7 +13,6 @@ export default class OptionsAcomp extends React.Component {
                 <input type="checkbox" name="AnéisDeCebola" value="10" />
                 <label for="AnéisDeCebola"> Anéis de cebola	____ R$ 5,00</label>
           </div>
-          <input type="submit" value="Inserir pedido" className = 'inserir-pedido' />
         </div>
   )       }
 };

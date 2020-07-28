@@ -20,7 +20,6 @@ export default  class OptionsBebidas extends React.Component {
               <input type="checkbox" name="Refrigerante750ml" value="10" />
               <label for="Refrigerante750ml"> Refrigerante 750ml ____ R$ 10,00</label>
             </div>
-            <input type="submit" value="Inserir pedido" className = 'inserir-pedido' />
         </div>
     
   )

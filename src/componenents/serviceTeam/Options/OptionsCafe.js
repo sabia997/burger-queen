@@ -20,8 +20,7 @@ export default  class OptionsCafe extends React.Component {
                 <input type="checkbox" name="SucoNatural" value="7" />
                 <label for="SucoNatural"> Suco de fruta natural	 ____ R$ 7,00</label>
             </div>
-            <input type="submit" value="Inserir pedido" className = 'inserir-pedido' />
-        </div>
+         </div>
   )
         }
     };
