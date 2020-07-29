@@ -3,9 +3,11 @@ import  React from 'react';
 const Request = () => (
         <React.Fragment>
             <div className = "request-resume" >
-                <label for="quantity">Qual a mesa?</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="5"/>
-                <input type="submit" value="P/ a Cozinha" className = 'inserir-pedido' />
+                <input className="input-desk-number"type="number" id="deskNumber" name="quantity" min="1" max="5"/>
+                <label for="deskNumber">Número da mesa</label>
+                <input className="input-client-name" type="string" id="clientName"/>
+                <label for="clientName">Nome do cliente</label>
+                <input type="button" className='button-send-to-kitchen'/>
             </div>
         </React.Fragment>         
 );

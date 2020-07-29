@@ -86,7 +86,7 @@
 }
 
 .menu-options {
-  padding-top: 10%;
+  padding-top: 18%;
 }
 
 .menu-option {
@@ -101,10 +101,29 @@
 }
 
 .request-resume {
-    background-color: #D0FF80;
-    height: 500px;
-    margin-top: 17%;
+    background-image: url('./request.svg');
+    height: 458px;
+    width: 224px;
+    margin-top: 70%;
+}
 
+.button-send-to-kitchen {
+  background: url('./sendToKitchen.svg')  no-repeat;
+  border:0;
+  width: 90px;
+  height: 70px;
+  outline:0;
+  -moz-outline:0;
+  cursor:pointer;
+}
+
+.button-send-to-kitchen:hover {
+background: url('./sendToKitchen.svg') no-repeat;
+
+}
+
+.button-send-to-kitchen:active {
+background: url('./sendToKitchen.svg') no-repeat;
 }
 
 @media  screen and (min-width: 1366px) {
