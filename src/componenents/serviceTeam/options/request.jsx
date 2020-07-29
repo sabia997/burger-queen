@@ -3,10 +3,16 @@ import  React from 'react';
 const Request = () => (
         <React.Fragment>
             <div className = "request-resume" >
-                <input className="input-desk-number"type="number" id="deskNumber" name="quantity" min="1" max="5"/>
-                <label for="deskNumber">Número da mesa</label>
-                <input className="input-client-name" type="string" id="clientName"/>
-                <label for="clientName">Nome do cliente</label>
+                <div className="buttons-client">
+                    <select className="select-desk-number" name="select-desk">
+                        <option value="valor1">Mesa 1</option> 
+                        <option value="valor2">Mesa 2</option>
+                        <option value="valor3">Mesa 3</option>
+                        <option value="valor4">Mesa 4</option>
+                        <option value="valor5">Mesa 5</option>
+                    </select>
+                    <input className="input-client-name" type="string" id="clientName" placeholder="Nome do cliente"/>
+                </div>
                 <input type="button" className='button-send-to-kitchen'/>
             </div>
         </React.Fragment>         

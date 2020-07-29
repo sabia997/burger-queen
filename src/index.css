@@ -112,9 +112,9 @@
   border:0;
   width: 90px;
   height: 70px;
-  outline:0;
-  -moz-outline:0;
   cursor:pointer;
+  margin-left: 147px;
+  margin-top: 286px;
 }
 
 .button-send-to-kitchen:hover {
@@ -125,40 +125,6 @@ background: url('./sendToKitchen.svg') no-repeat;
 .button-send-to-kitchen:active {
 background: url('./sendToKitchen.svg') no-repeat;
 }
-
-@media  screen and (min-width: 1366px) {
-    .position-screen {
-        margin-top: 10%;
-        display: flex;
-        flex-direction: inherit;
-        align-items: center;
-        justify-content: space-around;
-    }
-}
-
-@media  screen and (max-width: 400px) {  
-    .input-login {
-        width: 50%;    
-    }
-    
-    .input-submit {
-        width: 30%;
-    }
-
-    .buda-logo {
-        width: 30%;
-    }
-
-    .name-logo {
-        width: 60%;
-    }
-
-}
-
-header {
-  display: flex;
-}
-
 /*Burger Menu*/
 
 .menu-logout {
@@ -238,3 +204,70 @@ header {
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
+
+ /* Request (Green area)*/
+.select-desk-number {
+  margin-top: 5%;
+  width: 55%;
+  background-color: white;
+  color: #5DB075;
+  border-radius: 25px;
+  padding: 1.7%;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-left: 47px;
+}
+
+.input-client-name {
+    background-color: #F6F6F6;
+    margin-top: 5%;
+    color: #0c461c ;
+    border: 1px solid #0c461c; 
+    border-radius: 25px;
+    padding: 4%;
+    width:150px;
+    font-size: 20px;  
+    margin-left: 28px;
+}
+
+.buttons-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+@media  screen and (min-width: 1366px) {
+    .position-screen {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media  screen and (max-width: 400px) {  
+    .input-login {
+        width: 50%;    
+    }
+    
+    .input-submit {
+        width: 30%;
+    }
+
+    .buda-logo {
+        width: 30%;
+    }
+
+    .name-logo {
+        width: 60%;
+    }
+
+}
+
+header {
+  display: flex;
+}
+
+
+
