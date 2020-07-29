@@ -83,6 +83,7 @@
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
+    cursor: pointer;
 }
 
 .menu-options {
@@ -216,6 +217,7 @@ background: url('./sendToKitchen.svg') no-repeat;
   font-size: 25px;
   font-weight: bolder;
   margin-left: 47px;
+  cursor: pointer;
 }
 
 .input-client-name {
@@ -228,6 +230,7 @@ background: url('./sendToKitchen.svg') no-repeat;
     width:150px;
     font-size: 20px;  
     margin-left: 28px;
+    cursor: pointer;
 }
 
 .buttons-client {
