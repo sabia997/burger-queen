@@ -87,7 +87,7 @@ const Waitress = ({ history }) => {
                     {DrinksOptions ? <DrinksOptionsView /> : null}
 
                     <section className='menu-option'>
-                        <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Acompanhamentos</button>
+                        <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Coffee</button>
                         <ImgCoffee />
                     </section>
                     {BreakFastOptions ? <BreakFastOptionsView /> : null}
