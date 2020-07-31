@@ -1,133 +1,178 @@
 /*Login and SignUp*/
+.header-logo {
+  display: flex;
+  justify-content: center;  
+}
 
 .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-login {
-    background-color: #F6F6F6;
-    margin-top: 5%;
-    color:#000000 ;
-    border: 1px solid #000000 ; 
-    border-radius: 2px;
-    padding: 4%;
-    width: 350px;
-    font-size: 18px;   
+  background-color: #F6F6F6;
+  margin-top: 5%;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  padding: 4%;
+  width: 350px;
+  font-size: 18px;
 }
 
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    padding: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 8%;
 }
 
 .select-team {
-    margin-top: 5%;
-    width: 55%;
-    background-color: #5DB075;
-    color: white;
-    border: 8px solid;
-    border-radius: 25px;
-    padding: 1.7%;
-    font-size: 20px;
-    font-weight: bolder;
+  margin-top: 5%;
+  width: 55%;
+  background-color: #5DB075;
+  color: white;
+  border: 8px solid;
+  border-radius: 25px;
+  padding: 1.7%;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .input-submit {
-    margin-top: 5%;
-    width: 45%;
-    background-color: #5DB075;
-    color: white;
-    border: 8px solid;
-    border-radius: 25px;
-    padding: 1.7%;
-    font-size: 20px;
-    font-weight: bolder;
+  margin-top: 5%;
+  width: 45%;
+  background-color: #5DB075;
+  color: white;
+  border: 8px solid;
+  border-radius: 25px;
+  padding: 1.7%;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .link {
-    color: black;
-    font-size: 20px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
 }
 
 .text {
-    color: black;
-    font-size: 20px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
 }
+
 
 /*Waitress*/
 .waitress {
-    display: flex;
-    flex-direction: inherit;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-around;
 }
 
 .input-request {
-    width: 200px;
-    background-color: #5DB075;
-    color: white;
-    border: 2px solid;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: bolder;
-    text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: #5DB075;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-options {
+  padding-top: 150px;
 }
 
 .menu-option {
-    display: flex;
-    flex-direction: inherit;
-    justify-content: space-between;
-    margin-bottom: 30%;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .icon {
-    width: 25%;
+  width: 80px;
 }
 
+.options {
+  margin-top: unset;
+}
+.menu-label {
+ font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+ font-size: 15px;
+ color:green;
+}
+
+
+ /* Waitress - Request (Green area)*/
 .request-resume {
-    background-color: #D0FF80;
-    height: 500px;
-    margin-top: 17%;
-
+  background-image: url('./request.svg');
+  height: 458px;
+  width: 224px;
+  margin-top: 70%;
 }
 
-@media  screen and (min-width: 1366px) {
-    .position-screen {
-        margin-top: 10%;
-        display: flex;
-        flex-direction: inherit;
-        align-items: center;
-        justify-content: space-around;
-    }
+ .select-desk-number {
+  margin-top: 5%;
+  width: 55%;
+  background-color: white;
+  color: #5DB075;
+  border-radius: 25px;
+  padding: 1.7%;
+  font-size: 25px;
+  font-weight: bolder;
+  margin-left: 47px;
+  cursor: pointer;
 }
 
-@media  screen and (max-width: 400px) {  
-    .input-login {
-        width: 50%;    
-    }
-    
-    .input-submit {
-        width: 30%;
-    }
-
-    .buda-logo {
-        width: 30%;
-    }
-
-    .name-logo {
-        width: 60%;
-    }
-
+.input-client-name {
+  background-color: #F6F6F6;
+  margin-top: 5%;
+  color: #0c461c;
+  border: 1px solid #0c461c;
+  border-radius: 25px;
+  padding: 4%;
+  width: 150px;
+  font-size: 20px;
+  margin-left: 28px;
+  cursor: pointer;
 }
+
+.buttons-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-send-to-kitchen {
+  background: url('./sendToKitchen.svg') no-repeat;
+  border: 0;
+  width: 90px;
+  height: 70px;
+  cursor: pointer;
+  margin-left: 147px;
+  margin-top: 286px;
+}
+
+.button-send-to-kitchen:hover {
+  background: url('./sendToKitchen.svg') no-repeat;
+}
+
+.button-send-to-kitchen:active {
+  background: url('./sendToKitchen.svg') no-repeat;
+}
+
+ 

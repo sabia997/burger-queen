@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import firebaseConfig from '../../firebase';
+import { slide as Menu } from 'react-burger-menu'
 import ImgHamburger from './menuIcons/hamburger';
 import ImgFrenchFries from './menuIcons/frenchFries';
 import ImgSoda from './menuIcons/soda';
@@ -61,7 +62,11 @@ const Waitress = ({ history }) => {
     return (
         <React.Fragment>
             <header>
-                <button onClick={handleLogout} className='logout'>SAIR</button>
+                <Menu>
+                    <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
+                    <button className='menu-burger-option'>Pedidos</button>
+                    <button className='menu-burger-option'>Histórico</button>
+                </Menu>  
             </header>
             <main className='waitress'>
                 <div className="menu-options">
@@ -78,13 +83,13 @@ const Waitress = ({ history }) => {
                     {SideDishesOptions ? <SideDishesOptionsView /> : null}
 
                     <section className='menu-option'>
-                        <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Lanches</button>
+                        <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Bebidas</button>
                         <ImgSoda />
                     </section>
                     {DrinksOptions ? <DrinksOptionsView /> : null}
 
                     <section className='menu-option'>
-                        <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Acompanhamentos</button>
+                        <button onClick={ShowBreakFastOptions} type='submit' className='input-request'>Coffee</button>
                         <ImgCoffee />
                     </section>
                     {BreakFastOptions ? <BreakFastOptionsView /> : null}

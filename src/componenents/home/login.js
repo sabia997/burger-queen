@@ -48,7 +48,7 @@ const Login = ({
     return(
         <React.Fragment>
             <div className="position-screen">
-                <header>
+                <header className="header-logo">
                     <Logo/>
                 </header>
                 <main>
