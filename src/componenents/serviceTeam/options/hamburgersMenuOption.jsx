@@ -4,8 +4,8 @@ const SimpleHamburger = () => (
         <React.Fragment>
             <div className="options">
                 <div className="checkOptions">
-                    <input type="checkbox" name="simpleHamburger" value="10"/>
-                    <label for="simpleHamburger">"Hamburguer Simples - R$10 " value="10"</label>
+                    <input className="menu-checkbox"type="checkbox" name="simpleHamburger" value="10"/>
+                    <label className="menu-label" for="simpleHamburger">"Hamburguer Simples - R$10 " value="10"</label>
                 </div>
             </div>
         </React.Fragment>         

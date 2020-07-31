@@ -1,4 +1,8 @@
 /*Login and SignUp*/
+.header-logo {
+  display: flex;
+  justify-content: center;  
+}
 
 .logo {
   display: flex;
@@ -67,8 +71,8 @@
   justify-content: center;
 }
 
-/*Waitress*/
 
+/*Waitress*/
 .waitress {
   display: flex;
   flex-direction: inherit;
@@ -96,13 +100,23 @@
   display: flex;
   flex-direction: inherit;
   justify-content: space-between;
-  margin-bottom: 20%
+  margin-bottom: 25px;
 }
 
 .icon {
-  width: 25%;
+  width: 80px;
 }
 
+.options {
+  margin-top: unset;
+}
+.menu-label {
+ font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+ font-size: 15px;
+ color: black;
+}
+
+ /* Request (Green area)*/
 .request-resume {
   background-image: url('./request.svg');
   height: 458px;
@@ -110,118 +124,7 @@
   margin-top: 70%;
 }
 
-.button-send-to-kitchen {
-  background: url('./sendToKitchen.svg') no-repeat;
-  border: 0;
-  width: 90px;
-  height: 70px;
-  cursor: pointer;
-  margin-left: 147px;
-  margin-top: 286px;
-}
-
-.button-send-to-kitchen:hover {
-  background: url('./sendToKitchen.svg') no-repeat;
-}
-
-.button-send-to-kitchen:active {
-  background: url('./sendToKitchen.svg') no-repeat;
-}
-
-/*Burger Menu*/
-
-.menu-logout {
-  width: 200px;
-  background-color: #5DB075;
-  color: white;
-  border: 8px solid;
-  border-radius: 25px;
-  padding: 1.7%;
-  font-size: 30px;
-  font-weight: bolder;
-}
-
-/* Position and sizing of burger button */
-
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-
-.bm-burger-bars {
-  background: #5DB075;
-}
-
-/* Color/shape of burger icon bars on hover*/
-
-.bm-burger-bars-hover {
-  background: greenyellow;
-}
-
-/* Position and sizing of clickable cross button */
-
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-
-.bm-cross {
-  background: #0c5d01;
-}
-
-/*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
-
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-
-.bm-menu {
-  background: #ecebe2;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-
-.bm-morph-shape {
-  fill: rgba(0, 128, 0, 0.637);
-}
-
-/* Wrapper for item list */
-
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Individual item */
-
-.bm-item {
-  display: inline-block;
-}
-
-/* Styling of overlay */
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/* Request (Green area)*/
-
-.select-desk-number {
+ .select-desk-number {
   margin-top: 5%;
   width: 55%;
   background-color: white;
@@ -253,102 +156,22 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 1200px) {
-  .position-screen {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: inherit;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .menu-options {
-    padding-top: 196px;
-  }
-
-  .request-resume {
-    background-image:url(./request-phone.svg);
-    width: 522px;
-    height: 666px;
-    margin-left: 0%;
-    margin-top: 35%;
-  }
-
-  .select-desk-number {
-    margin-left: 32px;
-    width: 150px;
-  }
-
-  .input-client-name {
-    margin-left: 219px;
-    cursor: pointer;
-    margin-top: -60px;
-    width: 223px;
-  }
-
-  .button-send-to-kitchen {
-    margin-left: 430px;
-    margin-top: 500px;
-  }
-
+.button-send-to-kitchen {
+  background: url('./sendToKitchen.svg') no-repeat;
+  border: 0;
+  width: 90px;
+  height: 70px;
+  cursor: pointer;
+  margin-left: 147px;
+  margin-top: 286px;
 }
 
-@media screen and (max-width: 657px) {
-  .input-login {
-    width: 50%;
-  }
-
-  .input-submit {
-    width: 30%;
-  }
-
-  .buda-logo {
-    width: 30%;
-  }
-
-  .name-logo {
-    width: 60%;
-  }
-
-  .waitress {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .menu-options {
-      padding-top: 90px;
-      padding-left: 15%;
-      width: 69%;
-
-  }
-
-  .input-request {
-    width: 200px;
-    height: 80px;
-    font-size: 15px;
-  }
-
-  .icon {
-    width: 20%;
-  }
-
-  .request-resume {
-    margin-top: 0%;
-    background-image:url(./request.svg);
-    margin-left: 24%;
-  }
-
-  .total-requests {
-    
-  }
-
+.button-send-to-kitchen:hover {
+  background: url('./sendToKitchen.svg') no-repeat;
 }
 
-@media screen and (min-widht:500px) and (max-width: 657px) {
-
+.button-send-to-kitchen:active {
+  background: url('./sendToKitchen.svg') no-repeat;
 }
 
-header {
-  display: flex;
-}
+ 

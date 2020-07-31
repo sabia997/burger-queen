@@ -63,7 +63,9 @@ const Waitress = ({ history }) => {
         <React.Fragment>
             <header>
                 <Menu>
-                    <button onClick={handleLogout} className='menu-logout'>Sair</button>
+                    <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
+                    <button className='menu-burger-option'>Pedidos</button>
+                    <button className='menu-burger-option'>Historico</button>
                 </Menu>  
             </header>
             <main className='waitress'>
