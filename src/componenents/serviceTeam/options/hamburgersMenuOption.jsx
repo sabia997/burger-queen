@@ -1,38 +1,121 @@
-import React from 'react';
+import React, { useState } from 'react';
+import firebaseConfig from "../../../firebase";
 
-const SimpleHamburger = () => (
+const SimpleHamburger = () => {
+const [isnotChecked, isChecked] = useState(false)
+const db = firebaseConfig.firestore();
+
+const seletion = () => {
+    if (isnotChecked === false) {
+        isChecked(true)
+        alert('Hamburguer Simples')
+        db.collection("Pedido Lanche").doc("mesa 1").set({
+            Lanche: "Hamburguer Simples",
+            preço: "10"
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+    } else {
+        isChecked(false)
+        alert('desselecionou')
+    }
+}   
+     return(
         <React.Fragment>
             <div className="options">
                 <div className="checkOptions">
-                    <input type="checkbox" name="simpleHamburger" value="10"/>
-                    <label for="simpleHamburger">"Hamburguer Simples - R$10 " value="10"</label>
+                    <input type="checkbox" onClick ={seletion}  name="simpleHamburger" value="10"/>
+                    <label for="simpleHamburger">Hamburguer Simples - R$10 </label>
                 </div>
             </div>
-        </React.Fragment>         
-);
+        </React.Fragment>     
+    );
+};
 
-const DobleHamburger = () => (
+const DobleHamburger = () => {
+    const [isnotChecked, isChecked] = useState(false)
+    const db = firebaseConfig.firestore();
+    const seletionDuble = () => {
+    if (isnotChecked === false) {
+        isChecked(true)
+        alert('Hamburguer Duplo')
+        db.collection("Pedido Lanche").add({
+            Lanche: "Hamburguer DUplo",
+            preço: "15"
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+    } else {
+        isChecked(false)
+        alert('desselecionou')
+    }
+    }
+return(
     <React.Fragment>
         <div className="options">
             <div className="checkOptions">
-                <input type="checkbox" name="dobleHamburger" value="15"/>
+                <input type="checkbox" onClick ={seletionDuble} name="dobleHamburger" value="15"/>
                 <label for="dobleHamburger">Hamburguer Duplo - R$15</label>
             </div>
         </div>
-    </React.Fragment>         
+    </React.Fragment>
 );
+}
 
-const VeganChicken = () => (
+
+const VeganChicken = () => {
+    const [isnotChecked, isChecked] = useState(false)
+    const db = firebaseConfig.firestore();
+
+    const seletionAdd = () => {
+    if (isnotChecked === false) {
+        isChecked(true)
+        alert('Hamburguer Duplo')
+        db.collection("Pedido Lanche").doc(
+            "mesa 1"
+            )
+        .update({
+            Lanche: "Hamburguer Simples",
+            preço: "10",
+            adicional: '"frango" vegano'
+          }).then(function() {
+            console.log("Frank food updated");
+          });
+    } else {
+        isChecked(false)
+        alert('desselecionou')
+     db.collection("Pedido Lanche").doc(
+        "mesa 1"
+        )
+    .update({
+        Lanche: "Hamburguer Simples",
+        preço: "10",
+        adicional: ''
+      }).then(function() {
+        console.log("Frank food updated 2");
+      });
+    }
+}
+    
+    return(
     <React.Fragment>
         <div className="options">
             <div className="checkOptions">
-                <input type="checkbox"name="veganChicken"value="0"/>
+                <input type="checkbox"  onClick ={seletionAdd} name="veganChicken"value="0"/>
                 <label for="veganChicken">Vegan Chicken</label>
             </div>
         </div>
     </React.Fragment>         
 );
-
+}
 const VeganCow = () => (
     <React.Fragment>
         <div className="options">
