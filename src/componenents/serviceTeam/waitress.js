@@ -65,7 +65,7 @@ const Waitress = ({ history }) => {
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
                     <button className='menu-burger-option'>Pedidos</button>
-                    <button className='menu-burger-option'>Historico</button>
+                    <button className='menu-burger-option'>Histórico</button>
                 </Menu>  
             </header>
             <main className='waitress'>
@@ -83,7 +83,7 @@ const Waitress = ({ history }) => {
                     {SideDishesOptions ? <SideDishesOptionsView /> : null}
 
                     <section className='menu-option'>
-                        <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Lanches</button>
+                        <button onClick={ShowDrinksOptions} type='submit' className='input-request'>Bebidas</button>
                         <ImgSoda />
                     </section>
                     {DrinksOptions ? <DrinksOptionsView /> : null}

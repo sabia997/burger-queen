@@ -113,10 +113,11 @@
 .menu-label {
  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
  font-size: 15px;
- color: black;
+ color:green;
 }
 
- /* Request (Green area)*/
+
+ /* Waitress - Request (Green area)*/
 .request-resume {
   background-image: url('./request.svg');
   height: 458px;
