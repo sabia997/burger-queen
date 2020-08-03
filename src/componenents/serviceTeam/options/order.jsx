@@ -1,6 +1,6 @@
 import  React from 'react';
 
-const Request = () => (
+const Order = () => (
         <React.Fragment>
             <div className = "request-resume" >
                 <div className="buttons-client">
@@ -18,4 +18,4 @@ const Request = () => (
         </React.Fragment>         
 );
 
-export default Request;
+export default Order;
