@@ -7,17 +7,14 @@ import Waitress from './componenents/serviceTeam/waitress';
 import Cooker from './componenents/kitchen/cooker';
 import PrivateRoute from './privateRouter';
 import { AuthProvider } from './componenents/home/auth';
-import { Context, StateOrderContext } from './componenents/serviceTeam/options/orderContext';
 
 const App = () => {
     return (
       <AuthProvider>
         <Router>
           <React.Fragment>
-            <Context>
               <PrivateRoute exact path="/waitress" component = { Waitress } />
               <PrivateRoute path="/kitchen" component = { Cooker } />
-            </Context>
             <Route exact path="/" component = { Login } />
             <Route exact path="/home" component = { Login } />
             <Route exact path="/signup" component = { SignUp } />

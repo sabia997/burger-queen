@@ -80,12 +80,12 @@ const Waitress = ({ history }) => {
                         <div id="menuItem-sideDishes"></div>
                     </section>
                     <section className='menu-option'>
-                        <button type='submit' className='input-request'>Bebidas</button>
+                        <button onClick={handleClick} type='submit' className='input-request' name="drinks" >Bebidas</button>
                         <ImgSoda />
                         <div id="menuItem-drinks"></div>
                     </section>
                     <section className='menu-option'>
-                        <button type='submit' className='input-request'>Coffee</button>
+                        <button onClick={handleClick} type='submit' className='input-request' name="coffee">Coffee</button>
                         <ImgCoffee />
                         <div id="menuItem-coffee"></div>
                     </section>
