@@ -10,7 +10,7 @@ const HamburgersOptions = () => (
        <VeganCow/>
        <VeganCheff/>
        <Cheese/>
-       <Egg/>    
+       <Egg/>   
    </React.Fragment>
 );
 

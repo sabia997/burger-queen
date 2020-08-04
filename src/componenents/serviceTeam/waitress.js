@@ -30,28 +30,28 @@ const Waitress = ({ history }) => {
     const [BreakFastOptions, setShowCoffee] = useState(false);
 
     const ShowhamburgerOptions = () => {
-        if (HamburgerOptions === false) {
+        if (!HamburgerOptions) {
             setShowhamburger(true)
         } else {
             setShowhamburger(false)
         }
     }
     const ShowSideDishesOptions = () => {
-        if (SideDishesOptions === false) {
+        if (!SideDishesOptions) {
             setShowSideDishes(true)
         } else {
             setShowSideDishes(false)
         }
     }
     const ShowDrinksOptions = () => {
-        if (DrinksOptions === false) {
+        if (!DrinksOptions) {
             setShowDrinks(true)
         } else {
             setShowDrinks(false)
         }
     }
     const ShowBreakFastOptions = () => {
-        if (BreakFastOptions === false) {
+        if (!BreakFastOptions) {
             setShowCoffee(true)
         } else {
             setShowCoffee(false)

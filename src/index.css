@@ -102,6 +102,11 @@
     margin-top: 17%;
 
 }
+.menu-mesas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media  screen and (min-width: 1366px) {
     .position-screen {
