@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
@@ -30,9 +30,13 @@ const Waitress = ({ history }) => {
         coffee: false
     }
 
+    const [order, setOrder] = useState([]);    
+    
     const handleClick = useCallback(
         async event => {
             const eventName = event.target.name;
+            console.log(order);
+
             let mapData = [];
             let data = [];
             if (!menuState[eventName]) {
@@ -52,7 +56,9 @@ const Waitress = ({ history }) => {
                 mapData =
                     data.map(doc => React.createElement(MenuItem, {
                         key: doc.id,
-                        doc: doc
+                        doc: doc,
+                        setOrder: setOrder,
+                        order: order
                     }))
             }
             ReactDOM.render(mapData, document.getElementById('menuItem-' + eventName ))
