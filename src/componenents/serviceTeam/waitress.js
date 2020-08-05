@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
@@ -7,7 +7,7 @@ import ImgFrenchFries from './menuIcons/frenchFries';
 import ImgSoda from './menuIcons/soda';
 import ImgCoffee from './menuIcons/coffee';
 import Order from './options/order';
-import MenuItem  from './options/menuItem';
+import MenuItem from './options/menuItem';
 
 const Waitress = ({ history }) => {
     const handleLogout = useCallback(
@@ -22,7 +22,7 @@ const Waitress = ({ history }) => {
         },
         [history],
     )
-    
+
     const menuState = {
         hamburger: false,
         sideDishes: false,
@@ -30,13 +30,9 @@ const Waitress = ({ history }) => {
         coffee: false
     }
 
-    const [order, setOrder] = useState([]);    
-    
     const handleClick = useCallback(
         async event => {
             const eventName = event.target.name;
-            console.log(order);
-
             let mapData = [];
             let data = [];
             if (!menuState[eventName]) {
@@ -57,11 +53,9 @@ const Waitress = ({ history }) => {
                     data.map(doc => React.createElement(MenuItem, {
                         key: doc.id,
                         doc: doc,
-                        setOrder: setOrder,
-                        order: order
                     }))
             }
-            ReactDOM.render(mapData, document.getElementById('menuItem-' + eventName ))
+            ReactDOM.render(mapData, document.getElementById('menuItem-' + eventName))
             menuState[eventName] = !menuState[eventName];
         }, [menuState])
     return (
@@ -81,7 +75,7 @@ const Waitress = ({ history }) => {
                         <div id="menuItem-hamburger"></div>
                     </section>
                     <section className='menu-option'>
-                        <button onClick={handleClick}  type='submit' className='input-request' name="sideDishes">Acompanhamentos</button>
+                        <button onClick={handleClick} type='submit' className='input-request' name="sideDishes">Acompanhamentos</button>
                         <ImgFrenchFries />
                         <div id="menuItem-sideDishes"></div>
                     </section>

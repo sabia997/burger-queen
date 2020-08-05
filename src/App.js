@@ -7,7 +7,7 @@ import Waitress from './componenents/serviceTeam/waitress';
 import Cooker from './componenents/kitchen/cooker';
 import PrivateRoute from './privateRouter';
 import { AuthProvider } from './componenents/home/auth';
-import {OrderContext, Context} from './componenents/serviceTeam/options/orderContext';
+import { Context } from './componenents/serviceTeam/options/orderContext';
 
 const App = () => {
     return (
