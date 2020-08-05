@@ -16,7 +16,7 @@ const MenuItem = (doc) => {
                     .get()
                     .then(function (doc){
                             state.order.push({ id: eventId, data: doc.data() });
-                            state.price += doc.data().price;
+                            state.price = state.price + doc.data().price;
                     })
                     .catch(function (error) {
                         console.log("Error getting documents: ", error);

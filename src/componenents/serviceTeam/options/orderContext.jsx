@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const initialState =
 {
     order: [],
-    price: 0 
+    price: 0
 }
 
 export const OrderContext = React.createContext(
