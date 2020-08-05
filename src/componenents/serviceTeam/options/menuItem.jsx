@@ -2,6 +2,7 @@ import React, { useCallback, useContext } from 'react';
 import { OrderContext } from './orderContext';
 import ReactDOM from 'react-dom';
 import OrderItem from './orderItem';
+import Price from './price';
 import firebaseConfig from '../../../firebase';
 
 const MenuItem = (doc) => {
@@ -9,6 +10,7 @@ const MenuItem = (doc) => {
     const AddItem = useCallback(
         async event => {
             let mapOrder = [];
+            let addPrice = 0;
             const eventId = event.target.id;
             const db = firebaseConfig.firestore();
             await db.collection("menu")
@@ -22,7 +24,10 @@ const MenuItem = (doc) => {
                         console.log("Error getting documents: ", error);
                     });
             mapOrder = state.order.map(doc => React.createElement(OrderItem, { key: doc.id, doc: doc,}))
-            ReactDOM.render(mapOrder, document.getElementById("printOrder"))
+            ReactDOM.render(mapOrder, document.getElementById("printOrder"));
+
+            addPrice = [{price: state.price}].map(doc => React.createElement(Price,{ key: doc.id, doc: doc,}))
+            ReactDOM.render(addPrice, document.getElementById("priceOrder"));
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 

@@ -15,11 +15,12 @@ const Order = () => {
                         <option value="valor5">Mesa 5</option>
                     </select>
                     <input className="input-client-name" type="string" id="clientName" placeholder="Nome do cliente" />
-                    <div id="printOrder"></div>
-                    <div id="priceOrder">{state.price}</div>
                 </div>
+                <div id="printOrder"></div>
+                <div id="priceOrder"></div>
                 <input type="button" className='button-send-to-kitchen' />
             </div>
+
         </React.Fragment>
     );
 }
