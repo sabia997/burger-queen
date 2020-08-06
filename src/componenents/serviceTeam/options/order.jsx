@@ -4,10 +4,18 @@ import { OrderContext } from './orderContext';
 
 const Order = () => {
     const { state } = useContext(OrderContext)
+
     const HandleSendOrder = useCallback(
         async event => {
+            event.preventDefault();
+            const {
+                clientName,
+                desk
+            } = event.target.elements;
             const db = firebaseConfig.firestore();
             const order = {
+                name: clientName.value,
+                desk: desk.value,
                 order: state.order, 
                 price: state.price, 
                 status: "kitchen",
@@ -19,18 +27,15 @@ const Order = () => {
                     <React.Fragment>
                         <div className="request-resume" >
                             <div className="buttons-client">
-                                <select className="select-desk-number" name="select-desk">
-                                    <option value="valor1">Mesa 1</option>
-                                    <option value="valor2">Mesa 2</option>
-                                    <option value="valor3">Mesa 3</option>
-                                    <option value="valor4">Mesa 4</option>
-                                    <option value="valor5">Mesa 5</option>
-                                </select>
-                                <input className="input-client-name" type="string" id="clientName" placeholder="Nome do cliente" />
+                                <form onSubmit={HandleSendOrder}>
+                                    <input name="desk" type="number" className="select-desk-number" id="desk"placeholder="Mesa"/>
+                                    <input name="clientName" className="input-client-name" type="string" id="clientName" placeholder="Nome do cliente" />
+                                    <button type="submit" className='button-send-to-kitchen'></button>
+                                </form>
                             </div>
                             <div id="printOrder"></div>
                             <div id="priceOrder"></div>
-                            <input type="button" onClick={ HandleSendOrder } className='button-send-to-kitchen' />
+                           
                         </div>
 
                     </React.Fragment>

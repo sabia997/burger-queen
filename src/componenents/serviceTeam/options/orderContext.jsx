@@ -33,5 +33,4 @@ export const Context = props => {
             {props.children}
         </OrderContext.Provider>
     );
-
 }
