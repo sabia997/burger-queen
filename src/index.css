@@ -175,4 +175,32 @@
   background: url('./sendToKitchen.svg') no-repeat;
 }
 
- 
+.seePrice {
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  background-color: white;
+  font-weight: bolder;
+  color: #5cb074;
+
+}
+.Modal {
+  background-color: White /* ou #cceb80*/;
+  margin-top: 245px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-left: 10%;
+  font-size: xxx-large;
+  width: 560px;
+  padding: 2%;
+  font-weight: bolder;
+  color: #5cb074;
+  border: solid;
+}
+.modalInstructions {
+  font-size: xx-large;
+}
