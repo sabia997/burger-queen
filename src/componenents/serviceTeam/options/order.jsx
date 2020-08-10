@@ -59,7 +59,7 @@ const Order = () => {
             <div className="request-resume" >
                 <div className="buttons-client">
                     <select className="select-desk-number" name="select-desk"value={table} onChange={e => setTable(e.target.value)}>
-                        <option value="Mesa ?">Mesa ?</option>
+                        <option value="">mesa ?</option>
                         <option value="Mesa 1">Mesa 1</option>
                         <option value="Mesa 2">Mesa 2</option>
                         <option value="Mesa 3">Mesa 3</option>
