@@ -2,9 +2,9 @@ import React, { useCallback } from 'react';
 import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
-import HistoryCards from './historyCards';
+import OngoingCards from './ongoingCards';
 
-const HistoryOrders = ({ history }) => {
+const OngoingOrders = ({ history }) => {
     const handleLogout = useCallback(
         async event => {
             event.preventDefault();
@@ -18,23 +18,23 @@ const HistoryOrders = ({ history }) => {
         [history],
     )
 
-    const historyOrders = useCallback(
+    const ongoingOrders = useCallback(
         async event => {
             const db = firebaseConfig.firestore();
             let data = [];
             let mapData = [];
             event.preventDefault();
-            db.collection("client_orders").where("status", "==", "done")
+            db.collection("client_orders").where("status", "==", "ready")
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
                         data.push({ id: doc.id, data: doc.data() })
                     });
-                     mapData = data.map(doc => React.createElement(HistoryCards, {
+                     mapData = data.map(doc => React.createElement(OngoingCards, {
                         key: doc.id,
                         doc: doc,
                     }))
-                    ReactDOM.render(mapData, document.getElementById("historyOrders"))
+                    ReactDOM.render(mapData, document.getElementById("ongoingOrders"))
                 })
         }
         , [])
@@ -44,14 +44,16 @@ const HistoryOrders = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
+                    <button onClick={() => history.push("/waitress")}className='menu-burger-option'>Serviço</button>
+                    <button onClick={() => history.push("/historyWaitress")} className='menu-burger-option'>histórico</button>
                 </Menu>
             </header>
             <main>
-                <button onClick={historyOrders} type="button">Reload</button>
-                <div id="historyOrders"></div>
+                <button onClick={ongoingOrders} type="button">Reload</button>
+                <div id="ongoingOrders"></div>
             </main>
         </React.Fragment>
     )
 }
 
-export default HistoryOrders;
+export default OngoingOrders;
