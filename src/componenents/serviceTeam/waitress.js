@@ -63,8 +63,8 @@ const Waitress = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button className='menu-burger-option'>Pedidos</button>
-                    <button className='menu-burger-option'>Histórico</button>
+                    <button onClick={() => history.push("/history")}className='menu-burger-option'>Histórico</button>
+                    <button onClick={() => history.push("/orders")} className='menu-burger-option'>Pedidos</button>
                 </Menu>
             </header>
             <main className='waitress'>
