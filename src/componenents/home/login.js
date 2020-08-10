@@ -1,12 +1,17 @@
-import React, { useCallback } from 'react';
+import React, { useCallback,useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import firebaseConfig from '../../firebase';
 import Logo from '../logo/logo';
 import LoginForm from '../form/Loginform';
+import Modal from 'react-modal'
+import authErrors from './firebaseError'
+
 
 const Login = ({
         history
     }) => {
+        const [erros, seterros] = useState('')
+        const [modal, setModal] = useState(false)
         const handleLogin = useCallback(
             async event => {
                     event.preventDefault();
@@ -33,20 +38,25 @@ const Login = ({
                                         }
                                     })
                                 })
-                        } catch (erro) {
-                            console.log(erro);
+                        } catch (error) {
+                            console.log(console.error.code);
                         }
-
                     } catch (error) {
-                        alert(error);
+                        seterros(authErrors[error.code])
+                        //alert(error.code);
+                        setModal(true)
                     }
                 },
-
                 [history]
         );
-
-    return(
+        Modal.setAppElement('#root')
+        return(
         <React.Fragment>
+            <Modal className = 'Modal' isOpen={modal}>
+              <h2>Ops!</h2><br/>
+              <p className = 'modalInstructions'>{erros}</p><br/>
+              <button className= 'input-request' onClick = {() => setModal(false)}> Ok</button>
+            </Modal>
             <div className="position-screen">
                 <header className="header-logo">
                     <Logo/>

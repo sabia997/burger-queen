@@ -9,13 +9,14 @@ const Order = () => {
     const [name, setName] = useState("");
     const [table, setTable] = useState("");
     const [price, setPrice] = useState("");
+    const [modalError, setModalError] = useState(false)
     const [modal, setModal] = useState(false)
     let date = new Date();
     let hour = '0'+ date.getDate()+'/0'+ date.getMonth()+ '/'+date.getFullYear()+'às'+date.getHours() + ':' + date.getMinutes();
 
     const sendRequest = (evt) => {
         if ((state.order).length === 0 || table === '' || name ==='' ) {
-            setModal(true)
+            setModalError(true)
         } else {
             evt.preventDefault();
             let requestArray = []
@@ -34,6 +35,7 @@ const Order = () => {
             })
             .then(function () {
                 console.log("Document successfully written!");
+                setModal(true)
             })
             .catch(function (error) {
                 console.error("Error writing document: ", error);
@@ -43,10 +45,16 @@ const Order = () => {
     Modal.setAppElement('#root')
     return (
         <React.Fragment>
-            <Modal className = 'Modal' isOpen={modal}>
+            <Modal className = 'Modal' isOpen={modalError}>
               <h2>Erro!</h2><br/>
               <p className = 'modalInstructions'>Preencha todos os campos corretamente!</p><br/>
-              <button className= 'input-request' onClick = {() => setModal(false)}> Entendi!</button>
+              <button className= 'input-request' onClick = {() => setModalError(false)}> Entendi!</button>
+            </Modal>
+            <Modal className = 'Modal' isOpen={modal}>
+              <h2>Pedido enviado! </h2><br/>
+              <p className = 'modalInstructions'>cliente:{name}</p> 
+              <p className = 'modalInstructions'> mesa: {table}</p>
+              <button className= 'input-request' onClick = {() => setModal(false)}> Ok</button>
             </Modal>
             <div className="request-resume" >
                 <div className="buttons-client">
