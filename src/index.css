@@ -73,7 +73,6 @@
 }
 
 /*Waitress*/
-
 .waitress {
   display: flex;
   flex-direction: inherit;
@@ -120,7 +119,7 @@
 
 /* Waitress - Request (Green area)*/
 
-.request-resume {
+.order-resume {
   background-image: url('./request.svg');
   height: 458px;
   width: 224px;
@@ -175,6 +174,28 @@
 
 .button-send-to-kitchen:active {
   background: url('./sendToKitchen.svg') no-repeat;
+}
+
+.Modal {
+  background-color: White /* ou #cceb80*/;
+  margin-top: 245px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-left: 10%;
+  font-size: xxx-large;
+  width: 560px;
+  padding: 2%;
+  font-weight: bolder;
+  color: #5cb074;
+  border: solid;
+}
+
+.modalInstructions {
+  font-size: xx-large;
 }
 
 /* Orders History*/

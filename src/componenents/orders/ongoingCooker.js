@@ -24,7 +24,7 @@ const OngoingOrders = ({ history }) => {
             let data = [];
             let mapData = [];
             event.preventDefault();
-            db.collection("client_orders").where("status", "==", "ready")
+            db.collection("client_order").where("status", "==", "ready")
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {

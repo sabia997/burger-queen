@@ -24,7 +24,7 @@ const Cooker = ({ history }) => {
             let data = [];
             let mapData = [];
             event.preventDefault();
-            db.collection("client_orders").where("status", "==", "kitchen")
+            db.collection("client_order").where("status", "==", "kitchen")
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
