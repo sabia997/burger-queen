@@ -63,38 +63,38 @@ const Waitress = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button className='menu-burger-option'>Pedidos</button>
-                    <button className='menu-burger-option'>Histórico</button>
+                    <button onClick={() => history.push("/historyWaitress")} className='menu-burger-option'>Histórico</button>
+                    <button onClick={() => history.push("/ordersWaitress")} className='menu-burger-option'>Pedidos</button>
                 </Menu>
             </header>
             <main className='waitress'>
                 <div className="menu-options">
                     <section className='menu-option'>
                         <div className='button-and-image'>
-                        <button onClick={handleClick} type='submit' className='input-request' name="hamburger">Lanches</button>
-                        <ImgHamburger />
+                            <button onClick={handleClick} type='submit' className='input-request' name="hamburger">Lanches</button>
+                            <ImgHamburger />
                         </div>
                         <div id="menuItem-hamburger"></div>
                     </section>
                     <section className='menu-option'>
                         <div className='button-and-image'>
-                        <button onClick={handleClick} type='submit' className='input-request' name="sideDishes">Acompanhamentos</button>
-                        <ImgFrenchFries />
+                            <button onClick={handleClick} type='submit' className='input-request' name="sideDishes">Acompanhamentos</button>
+                            <ImgFrenchFries />
                         </div>
                         <div id="menuItem-sideDishes"></div>
                     </section>
                     <section className='menu-option'>
-                    <div className='button-and-image'>
-                        <button onClick={handleClick} type='submit' className='input-request' name="drinks" >Bebidas</button>
-                        <ImgSoda />
-                    </div>
+                        <div className='button-and-image'>
+                            <button onClick={handleClick} type='submit' className='input-request' name="drinks" >Bebidas</button>
+                            <ImgSoda />
+                        </div>
                         <div id="menuItem-drinks"></div>
                     </section>
                     <section className='menu-option'>
-                    <div className='button-and-image'>
-                        <button onClick={handleClick} type='submit' className='input-request' name="coffee">Coffee</button>
-                        <ImgCoffee />
-                    </div>
+                        <div className='button-and-image'>
+                            <button onClick={handleClick} type='submit' className='input-request' name="coffee">Coffee</button>
+                            <ImgCoffee />
+                        </div>
                         <div id="menuItem-coffee"></div>
                     </section>
                 </div>
