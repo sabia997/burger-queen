@@ -1,7 +1,8 @@
 /*Login and SignUp*/
+
 .header-logo {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .logo {
@@ -71,7 +72,6 @@
   justify-content: center;
 }
 
-
 /*Waitress*/
 .waitress {
   display: flex;
@@ -110,22 +110,23 @@
 .options {
   margin-top: unset;
 }
+
 .menu-label {
- font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
- font-size: 15px;
- color:green;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 15px;
+  color: green;
 }
 
+/* Waitress - Request (Green area)*/
 
- /* Waitress - Request (Green area)*/
-.request-resume {
+.order-resume {
   background-image: url('./request.svg');
   height: 458px;
   width: 224px;
   margin-top: 70%;
 }
 
- .select-desk-number {
+.select-desk-number {
   margin-top: 5%;
   width: 55%;
   background-color: white;
@@ -175,4 +176,85 @@
   background: url('./sendToKitchen.svg') no-repeat;
 }
 
- 
+.Modal {
+  background-color: White /* ou #cceb80*/;
+  margin-top: 245px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-left: 10%;
+  font-size: xxx-large;
+  width: 560px;
+  padding: 2%;
+  font-weight: bolder;
+  color: #5cb074;
+  border: solid;
+}
+
+.modalInstructions {
+  font-size: xx-large;
+}
+
+/* Orders History*/
+
+.total-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: black;
+  border: green;
+}
+
+.section-order {
+  border: solid 0.5px black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.item-order {
+  
+}
+
+.button-reload {
+  background: url('./refresh-button.svg') no-repeat;
+  border: 0;
+  width: 90px;
+  height: 70px;
+  cursor: pointer;
+  margin-left: 140px;
+  width: 50px;
+  margin-top: 25px;
+}
+
+.button-reload:hover {
+  background: url('./refresh-button.svg') no-repeat;
+}
+
+.button-reload:active {
+  background: url('./refresh-button.svg') no-repeat;
+}
+
+.label-reload {
+  justify-content: center;
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: -180px;
+  margin-top: -44px;
+}
+
+.button-submit-status {
+  width: 200px;
+  background-color: #5DB075;
+  color: white;
+  border: 8px solid;
+  border-radius: 25px;
+  padding: 1.7%;
+  font-size: 12px;
+  font-weight: bolder;
+}
