@@ -110,22 +110,23 @@
 .options {
   margin-top: unset;
 }
+
 .menu-label {
- font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
- font-size: 15px;
- color:green;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 15px;
+  color: green;
 }
 
+/* Waitress - Request (Green area)*/
 
- /* Waitress - Request (Green area)*/
-.request-resume {
+.order-resume {
   background-image: url('./request.svg');
   height: 458px;
   width: 224px;
   margin-top: 70%;
 }
 
- .select-desk-number {
+.select-desk-number {
   margin-top: 5%;
   width: 55%;
   background-color: white;
@@ -175,15 +176,6 @@
   background: url('./sendToKitchen.svg') no-repeat;
 }
 
-.seePrice {
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  background-color: white;
-  font-weight: bolder;
-  color: #5cb074;
-
-}
 .Modal {
   background-color: White /* ou #cceb80*/;
   margin-top: 245px;
@@ -201,6 +193,7 @@
   color: #5cb074;
   border: solid;
 }
+
 .modalInstructions {
   font-size: xx-large;
 }

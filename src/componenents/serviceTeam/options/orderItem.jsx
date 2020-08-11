@@ -24,6 +24,4 @@ const OrderItem = (doc) => {
         </React.Fragment>)
 }
 
-
-
 export default OrderItem;

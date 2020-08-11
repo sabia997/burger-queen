@@ -18,14 +18,14 @@
   
     .input-request {
       width: 220px;
-      height: 110px;
+      height: 80px;
     }
   
     .icon {
       width: 120px;
     }
   
-    .request-resume {
+    .order-resume {
       background-image:url(./request-phone.svg);
       width: 522px;
       height: 666px;
@@ -91,7 +91,7 @@
       width: 60px;
     }
   
-    .request-resume {
+    .order-resume {
       margin-top: 0%;
       background-image:url(./request.svg);
       margin-left: 24%;
