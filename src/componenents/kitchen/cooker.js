@@ -49,7 +49,8 @@ const Cooker = ({ history }) => {
                 </Menu>
             </header>
             <main>
-                <button onClick={cookerOrders} type="button">Reload</button>
+                <button name="buttonReload" className="button-reload" onClick={cookerOrders} type="button"></button>
+                <label for="buttonReload" className="label-reload">Atualize pedidos para preparo</label>
                 <div id="kitchenOrders"></div>
             </main>
         </React.Fragment>

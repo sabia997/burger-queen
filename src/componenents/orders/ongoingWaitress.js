@@ -30,7 +30,7 @@ const OngoingOrders = ({ history }) => {
                     querySnapshot.forEach(function (doc) {
                         data.push({ id: doc.id, data: doc.data() })
                     });
-                     mapData = data.map(doc => React.createElement(OngoingCards, {
+                    mapData = data.map(doc => React.createElement(OngoingCards, {
                         key: doc.id,
                         doc: doc,
                     }))
@@ -44,8 +44,8 @@ const OngoingOrders = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button onClick={() => history.push("/waitress")}className='menu-burger-option'>Serviço</button>
-                    <button onClick={() => history.push("/historyWaitress")} className='menu-burger-option'>histórico</button>
+                    <button onClick={() => history.push("/waitress")} className='menu-burger-option'>Serviço</button>
+                    <button onClick={() => history.push("/historyWaitress")} className='menu-burger-option'>Histórico</button>
                 </Menu>
             </header>
             <main>

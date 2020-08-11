@@ -30,7 +30,7 @@ const HistoryOrders = ({ history }) => {
                     querySnapshot.forEach(function (doc) {
                         data.push({ id: doc.id, data: doc.data() })
                     });
-                     mapData = data.map(doc => React.createElement(HistoryCards, {
+                    mapData = data.map(doc => React.createElement(HistoryCards, {
                         key: doc.id,
                         doc: doc,
                     }))
@@ -44,13 +44,14 @@ const HistoryOrders = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button onClick={() => history.push("/kitchen")}className='menu-burger-option'>Cozinha</button>
+                    <button onClick={() => history.push("/kitchen")} className='menu-burger-option'>Cozinha</button>
                     <button onClick={() => history.push("/ordersCooker")} className='menu-burger-option'>Pedidos</button>
                 </Menu>
             </header>
             <main>
-                <button onClick={historyOrders} type="button">Reload</button>
-                <div id="historyOrders"></div>
+                <button name="buttonReload" className="button-reload" onClick={historyOrders} type="button"></button>
+                <label for="buttonReload" className="label-reload">Atualize o hitórico</label>
+                <div className="total-orders" id="historyOrders"></div>
             </main>
         </React.Fragment>
     )

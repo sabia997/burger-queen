@@ -49,7 +49,8 @@ const OngoingOrders = ({ history }) => {
                 </Menu>
             </header>
             <main>
-                <button onClick={ongoingOrders} type="button">Reload</button>
+                <button name="buttonReload" className="button-reload" onClick={ongoingOrders} type="button"></button>
+                <label for="buttonReload" className="label-reload">Atualize os pedidos prontos para entrega</label>
                 <div id="ongoingOrders"></div>
             </main>
         </React.Fragment>
