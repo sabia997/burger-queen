@@ -3,6 +3,7 @@ import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
 import HistoryCards from './historyCards';
+import ListIcon from './icons/listIcon';
 
 const HistoryOrders = ({ history }) => {
     const handleLogout = useCallback(
@@ -50,7 +51,7 @@ const HistoryOrders = ({ history }) => {
             </header>
             <main>
                 <button name="buttonReload" className="button-reload" onClick={historyOrders} type="button"></button>
-                <label for="buttonReload" className="label-reload">Atualize o hitórico</label>
+                <label for="buttonReload" className="label-reload">Atualize o histórico de pedidos concluídos {<ListIcon />}</label>
                 <div className="total-orders" id="historyOrders"></div>
             </main>
         </React.Fragment>

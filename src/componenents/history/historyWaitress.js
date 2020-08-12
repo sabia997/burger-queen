@@ -3,6 +3,7 @@ import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
 import HistoryCards from './historyCards';
+import ListIcon from './icons/listIcon';
 
 const HistoryOrders = ({ history }) => {
     const handleLogout = useCallback(
@@ -30,7 +31,7 @@ const HistoryOrders = ({ history }) => {
                     querySnapshot.forEach(function (doc) {
                         data.push({ id: doc.id, data: doc.data() })
                     });
-                     mapData = data.map(doc => React.createElement(HistoryCards, {
+                    mapData = data.map(doc => React.createElement(HistoryCards, {
                         key: doc.id,
                         doc: doc,
                     }))
@@ -44,12 +45,13 @@ const HistoryOrders = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button onClick={() => history.push("/waitress")}className='menu-burger-option'>Serviço</button>
+                    <button onClick={() => history.push("/waitress")} className='menu-burger-option'>Serviço</button>
                     <button onClick={() => history.push("/ordersWaitress")} className='menu-burger-option'>Pedidos</button>
                 </Menu>
             </header>
             <main>
-                <button onClick={historyOrders} type="button">Reload</button>
+                <button name="reloadButton" className="button-reload" onClick={historyOrders} type="button"></button>
+                <label for="reloadButton" className="label-reload">Atualize o histórico de pedidos concluídos {<ListIcon />}</label>
                 <div id="historyOrders"></div>
             </main>
         </React.Fragment>

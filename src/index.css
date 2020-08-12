@@ -242,10 +242,10 @@
 
 .label-reload {
   justify-content: center;
-  margin-bottom: 10px;
-  display: flex;
-  margin-left: -180px;
-  margin-top: -44px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: -72px;
 }
 
 .button-submit-status {
@@ -257,4 +257,8 @@
   padding: 1.7%;
   font-size: 12px;
   font-weight: bolder;
+}
+
+.list-icon {
+  width: 50px;
 }
