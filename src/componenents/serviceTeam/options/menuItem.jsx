@@ -36,7 +36,7 @@ const MenuItem = (doc) => {
             <div className="options">
                 <div className="checkOptions">
                     <input id={doc.doc.id} className="menu-checkbox-add" onClick={AddItem} type="button" name="menuOptionAdd" value="+" />
-                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name}</label>
+                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00`}</label>
                 </div>
             </div>
         </React.Fragment>)

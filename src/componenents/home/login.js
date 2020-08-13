@@ -52,11 +52,13 @@ const Login = ({
     Modal.setAppElement('#root');
     return (
         <React.Fragment>
-            <Modal className='Modal' isOpen={modal}>
-                <h2>Ops!</h2><br />
-                <p className='modalInstructions'>{erros}</p><br />
-                <button className='input-order' onClick={() => setModal(false)}> Ok</button>
-            </Modal>
+            <div className="modal-center">
+                <Modal className='Modal' isOpen={modal}>
+                    <h2>Ops!</h2><br />
+                    <p className='modalInstructions'>{erros}</p><br />
+                    <button className='input-modal' onClick={() => setModal(false)}> Ok</button>
+                </Modal>
+            </div>
             <div className="position-screen">
                 <header className="header-logo">
                     <Logo />

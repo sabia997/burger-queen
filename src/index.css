@@ -259,18 +259,17 @@
 /*Modal with errors */
 
 .Modal {
+  margin-right: 25%;
+  width: 50%;
+  margin-left: 25%;
   background-color: White;
   margin-top: 245px;
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-left: 10%;
   font-size: xxx-large;
-  width: 560px;
-  padding: 2%;
   font-weight: bolder;
   color: #5cb074;
   border: solid;
@@ -278,6 +277,19 @@
 
 .modalInstructions {
   font-size: xx-large;
+}
+
+.input-modal {
+  width: 200px;
+  height: 82px;
+  background-color: #5DB075;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Orders History*/
