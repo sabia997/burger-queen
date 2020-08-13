@@ -7,13 +7,13 @@
     justify-content: space-around;
   }
 
-  .menu-option{
+  .menu-option {
     justify-content: space-between;
   }
 
   .menu-options {
-      padding-left: 76px;
-      padding-top: 113px;
+    padding-left: 35px;
+    padding-top: 122px;
   }
 
   .input-request {
@@ -22,32 +22,33 @@
   }
 
   .icon {
-    width: 120px;
+    width: 80px;
   }
 
   .order-resume {
-    background-image:url(./request-phone.svg);
+    background-image: url(./request-phone.svg);
+    background-repeat: no-repeat;
     width: 522px;
     height: 666px;
-    margin-left: 0%;
-    margin-top: 130px;
+    margin-top: 100px;
   }
 
   .select-desk-number {
     margin-left: 32px;
-    width: 150px;
+    width: 75px;
+    text-align: center;
   }
-
+  
   .input-client-name {
-    margin-left: 219px;
-    cursor: pointer;
-    margin-top: -60px;
     width: 223px;
   }
 
+  .printOrder {
+    height: 495px;
+  }
+
   .button-send-to-kitchen {
-    margin-left: 430px;
-    margin-top: 500px;
+    margin-left: 50%;
   }
 
 }
@@ -72,13 +73,11 @@
   .waitress {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .menu-options {
-      padding-top: 90px;
-      padding-left: 15%;
-      width: 69%;
-
+    padding-top: 90px;
   }
 
   .input-request {
@@ -92,13 +91,30 @@
   }
 
   .order-resume {
-    margin-top: 0%;
-    background-image:url(./request.svg);
-    margin-left: 24%;
+    background-image: url(./request.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
-  .total-requests {
-    
+  .priceOrder {
+    margin-top: 30px;
+    width: 30%;
+  }
+
+  .printOrder {
+    height: 470px;
+    overflow: auto;
+  }
+
+  .show-price {
+    border-radius: 10px;
+    background-color: #cceb80;
+    width: 120px;
+    height: 70px;
+  }
+
+  .button-send-to-kitchen {
+    margin-left: 35%;
   }
 
 }
@@ -109,15 +125,19 @@
     height: 65px;
     font-size: 10px;
   }
-}
 
-@media screen and (max-width: 700px) {
-  .button-reload {
-    margin-left: 100px;
+  .button-send-to-kitchen {
+    margin-left: 25%;
   }
 
-  .label-reload {
-    margin-top: 13px;
-  }
-  
 }
+
+  @media screen and (max-width: 700px) {
+    .button-reload {
+      margin-left: 100px;
+    }
+    .label-reload {
+      margin-top: 13px;
+    }
+
+  }

@@ -1,10 +1,11 @@
+
 import React, { useCallback, useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import firebaseConfig from '../../firebase';
 import Logo from '../logo/logo';
 import LoginForm from '../form/Loginform';
 import Modal from 'react-modal'
-import authErrors from './firebaseError'
+import authErrors from '../../firebaseError'
 
 const Login = ({
     history
@@ -48,13 +49,13 @@ const Login = ({
         },
         [history]
     );
-    Modal.setAppElement('#root')
+    Modal.setAppElement('#root');
     return (
         <React.Fragment>
             <Modal className='Modal' isOpen={modal}>
                 <h2>Ops!</h2><br />
                 <p className='modalInstructions'>{erros}</p><br />
-                <button className='input-request' onClick={() => setModal(false)}> Ok</button>
+                <button className='input-order' onClick={() => setModal(false)}> Ok</button>
             </Modal>
             <div className="position-screen">
                 <header className="header-logo">
