@@ -12,7 +12,9 @@ const Order = () => {
 
     const sendOrder = (evt) => {
         if ((state.order).length === 0 || table === '' || name === '') {
+            evt.preventDefault();
             setModalError(true)
+            
         } else {
             evt.preventDefault();
             let orderArray = []
@@ -50,20 +52,20 @@ const Order = () => {
                 <h2>Pedido enviado! </h2><br />
                 <p className='modalInstructions'>cliente:{name}</p>
                 <p className='modalInstructions'> mesa: {table}</p>
-                <button className='input-order' onClick={() => setModal(false)}> Ok</button>
+                <button className='input-order' onClick={() => {setModal(false); window.location.reload()}} > Ok</button>
             </Modal>
             <div className="order-resume">
-                <form onSubmit={sendOrder}>
+                <form>
                     <div className="buttons-client">
                         <input className="select-desk-number" type='number' placeholder="mesa" name="select-desk" value={table} onChange={e => setTable(e.target.value)} />
                         <input className="input-client-name" type="string" placeholder="Nome do cliente" value={name} onChange={e => setName(e.target.value)} />
                     </div>
                     <div className="printOrder" id="printOrder"></div>
                     <div className='btnSend-price'>
-                        <div className='show-price' id="priceOrder">
-                            <h1 className='total-price'>TOTAL</h1>
-                        </div>
-                        <button type="submit" className='button-send-to-kitchen'></button>
+                    <div className='show-price' id="priceOrder">
+                        <h1 className='total-price'>TOTAL</h1>
+                    </div>
+                    <button type="submit" onClick ={sendOrder} className='button-send-to-kitchen'></button>
 
                     </div>
                 </form>
