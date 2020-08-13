@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.047765d6.chunk.css",
+    "main.js": "/static/js/main.3382699f.chunk.js",
+    "main.js.map": "/static/js/main.3382699f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.709f1246.js",
+    "runtime-main.js.map": "/static/js/runtime-main.709f1246.js.map",
+    "static/js/2.550e19f1.chunk.js": "/static/js/2.550e19f1.chunk.js",
+    "static/js/2.550e19f1.chunk.js.map": "/static/js/2.550e19f1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9d6038defcdb3817d9227d23071de3ee.js": "/precache-manifest.9d6038defcdb3817d9227d23071de3ee.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.047765d6.chunk.css.map": "/static/css/main.047765d6.chunk.css.map",
+    "static/js/2.550e19f1.chunk.js.LICENSE.txt": "/static/js/2.550e19f1.chunk.js.LICENSE.txt",
+    "static/media/coffeeImg.svg": "/static/media/coffeeImg.d2bc5510.svg",
+    "static/media/frenchFriesImg.svg": "/static/media/frenchFriesImg.fb8c4178.svg",
+    "static/media/hamburgerImg.svg": "/static/media/hamburgerImg.337473f6.svg",
+    "static/media/list.svg": "/static/media/list.d5570a8d.svg",
+    "static/media/logo.svg": "/static/media/logo.f8af40eb.svg",
+    "static/media/pan.svg": "/static/media/pan.f6ea65b9.svg",
+    "static/media/index.css": "/static/media/sendToKitchen.fbaf886c.svg",
+    "static/media/media.css": "/static/media/request.7ac66280.svg",
+    "static/media/sodaImg.svg": "/static/media/sodaImg.0bc50696.svg",
+    "static/media/title.svg": "/static/media/title.742d4ed6.svg",
+    "static/media/waitress-icon.svg": "/static/media/waitress-icon.59c33e76.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.709f1246.js",
+    "static/js/2.550e19f1.chunk.js",
+    "static/css/main.047765d6.chunk.css",
+    "static/js/main.3382699f.chunk.js"
+  ]
+}

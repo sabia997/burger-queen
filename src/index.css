@@ -100,13 +100,12 @@
 .menu-option {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .icon {
   width: 80px;
-  padding-left: 5%;
+  padding-left: 16px;
 }
 
 .options {
@@ -117,12 +116,12 @@
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-size: 15px;
   color: green;
-  padding: 3%;
 }
 
 .button-and-image {
   display: flex;
-  margin-bottom: 25px;
+  flex-direction: initial;
+  margin-bottom: 15px;
 }
 
 .checkOptions {
@@ -133,7 +132,7 @@
   color: #F6F6F6;
   font-weight: bolder;
   font-size: large;
-  width: 26px;
+  width: 60px;
   border-radius: 55px;
   background-color: #5DB075;
   border: none;
@@ -153,7 +152,7 @@
 .select-desk-number {
   margin-top: 5%;
   width: 22%;
-  border-color: white;
+  border: none;
   background-color: white;
   color: #5DB075;
   border-radius: 25px;
@@ -166,7 +165,7 @@
   margin-left: 20px;
   padding: 2%;
   width: 59%;
-  border-color: white;
+  border: none;
   background-color: white;
   color: #5DB075;
   border-radius: 25px;
@@ -251,7 +250,7 @@
   color: #F6F6F6;
   font-weight: bolder;
   font-size: large;
-  width: 26px;
+  width: 60px;
   border-radius: 70px;
   background-color: red;
   border: none;
