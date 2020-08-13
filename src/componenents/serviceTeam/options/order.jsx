@@ -11,7 +11,7 @@ const Order = () => {
     const [modal, setModal] = useState(false)
 
     const sendOrder = (evt) => {
-        if ((state.order).length === 0 || table === '' || name ==='' ) {
+        if ((state.order).length === 0 || table === '' || name === '') {
             setModalError(true)
         } else {
             evt.preventDefault();
@@ -53,15 +53,20 @@ const Order = () => {
                 <button className='input-order' onClick={() => setModal(false)}> Ok</button>
             </Modal>
             <div className="order-resume">
-                <div className="buttons-client">
-                    <form onSubmit={sendOrder}>
-                        <input className="select-desk-number" type='number' name="select-desk" value={table} onChange={e => setTable(e.target.value)} />
+                <form onSubmit={sendOrder}>
+                    <div className="buttons-client">
+                        <input className="select-desk-number" type='number' placeholder="mesa" name="select-desk" value={table} onChange={e => setTable(e.target.value)} />
                         <input className="input-client-name" type="string" placeholder="Nome do cliente" value={name} onChange={e => setName(e.target.value)} />
+                    </div>
+                    <div className="printOrder" id="printOrder"></div>
+                    <div className='btnSend-price'>
+                        <div className='show-price' id="priceOrder">
+                            <h1 className='total-price'>TOTAL</h1>
+                        </div>
                         <button type="submit" className='button-send-to-kitchen'></button>
-                    </form>
-                </div>
-                <div id="printOrder"></div>
-                <div id="priceOrder"></div>
+
+                    </div>
+                </form>
             </div>
         </React.Fragment>
     );

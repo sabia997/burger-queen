@@ -79,9 +79,9 @@
   justify-content: space-around;
 }
 
-.input-request {
+.input-order {
   width: 200px;
-  height: 100px;
+  height: 82px;
   background-color: #5DB075;
   color: white;
   border: 2px solid;
@@ -98,13 +98,14 @@
 
 .menu-option {
   display: flex;
-  flex-direction: inherit;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 25px;
 }
 
 .icon {
   width: 80px;
+  padding-left: 5%;
 }
 
 .options {
@@ -113,49 +114,68 @@
 
 .menu-label {
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  
   font-size: 15px;
   color: green;
+  padding: 3%;
+}
+.button-and-image {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.checkOptions {
+  padding: 2%;
+}
+.menu-checkbox-add {
+  color: #F6F6F6;
+  font-weight: bolder;
+  font-size: large;
+  width: 26px;
+  border-radius: 55px;
+  background-color: #5DB075;
+  border: none;
 }
 
 /* Waitress - Request (Green area)*/
 
 .order-resume {
   background-image: url('./request.svg');
-  height: 458px;
-  width: 224px;
-  margin-top: 70%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 700px;
+  width: 300px;
+  margin-top: 148px;
 }
 
 .select-desk-number {
   margin-top: 5%;
-  width: 55%;
+  width: 22%;
+  border-color:white;
   background-color: white;
   color: #5DB075;
   border-radius: 25px;
-  padding: 1.7%;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bolder;
-  margin-left: 47px;
-  cursor: pointer;
 }
 
 .input-client-name {
-  background-color: #F6F6F6;
   margin-top: 5%;
-  color: #0c461c;
-  border: 1px solid #0c461c;
+  margin-left: 20px;
+  padding: 2%;
+  width: 59%;
+  border-color:white;
+  background-color: white;
+  color: #5DB075;
   border-radius: 25px;
-  padding: 4%;
-  width: 150px;
-  font-size: 20px;
-  margin-left: 28px;
-  cursor: pointer;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 .buttons-client {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction:initial ;
+  justify-content: left;
 }
 
 .button-send-to-kitchen {
@@ -164,8 +184,7 @@
   width: 90px;
   height: 70px;
   cursor: pointer;
-  margin-left: 147px;
-  margin-top: 286px;
+  margin-left: 35%;
 }
 
 .button-send-to-kitchen:hover {
@@ -176,8 +195,69 @@
   background: url('./sendToKitchen.svg') no-repeat;
 }
 
+.printOrder {
+  height: 469px;
+  height: 475px;
+  margin-top: 5px;
+  overflow:auto; 
+}
+
+.priceOrder {
+  margin-top:30px;
+  width: 30%;
+}
+
+.btnSend-price{
+  display: flex;
+  flex-direction: inherit;
+}
+
+.show-price {
+  border-radius: 10px;
+  background-color: #cceb80;
+  width:120px ;
+  height: 70px;
+  margin-left: 5%;
+}
+
+.total-price {
+  margin-top: 5%;
+  margin-left: 5px;
+  color: #1d1d1d;
+  font-size: 25px;
+  font-family: sans-serif;
+  padding: 0%;
+  font-weight: bolder;
+}
+
+.total-price-value{
+  padding: 10%;
+  font-size: 20px;
+  width: 100px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.menuOptionSubtract {
+  padding: 3%;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+.menu-checkbox-remove {
+  color: #F6F6F6;
+  font-weight: bolder;
+  font-size: large;
+  width: 26px;
+  border-radius: 70px;
+  background-color: red;
+  border: none;
+}
+
+/*Modal with errors */
 .Modal {
-  background-color: White /* ou #cceb80*/;
+  background-color: White ;
   margin-top: 245px;
   width: 50%;
   display: flex;
@@ -200,7 +280,7 @@
 
 /* Orders History*/
 
-.total-orders {
+.total-requests {
   display: flex;
   flex-direction: column;
   align-items: center;
