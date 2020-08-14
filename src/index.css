@@ -125,7 +125,7 @@
 }
 
 .checkOptions {
-  padding: 2%;
+  padding: 5px;
 }
 
 .menu-checkbox-add {
@@ -137,6 +137,7 @@
   background-color: #5DB075;
   border: none;
 }
+
 
 /* Waitress - Request (Green area)*/
 

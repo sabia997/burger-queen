@@ -11,10 +11,11 @@ const OrderItem = (doc) => {
             let removePrice = 0;
             const eventId = event.target.id;
             state.order.pop({ id: eventId, data: doc.doc.data });
-            state.price = state.price - doc.doc.data.price;
-            mapOrder = state.order.map(doc => React.createElement(OrderItem, { key: doc.id, doc: doc, }))
-            ReactDOM.render(mapOrder, document.getElementById("printOrder"));
-
+            if (state.price >= 0) {
+                state.price = state.price - doc.doc.data.price;
+                mapOrder = state.order.map(doc => React.createElement(OrderItem, { key: doc.id, doc: doc, }))
+                ReactDOM.render(mapOrder, document.getElementById("printOrder"));
+            }
             removePrice = [{ price: state.price }].map(doc => React.createElement(Price, { key: doc.id, doc: doc, }))
             ReactDOM.render(removePrice, document.getElementById("priceOrder"));
             // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,7 +25,8 @@ const OrderItem = (doc) => {
         <React.Fragment>
             <div className="checkOptions">
                 <input className="menu-checkbox-remove" onClick={RemoveItem} type="button" name="menuOptionSubtract" value="-" />
-                <label className='menuOptionSubtract' htmlFor="menuOptionSubtract">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00`}</label>
+                <label className='menuOptionSubtract' htmlFor="menuOptionSubtract">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00`}
+                    {doc.doc.data.extraCheese ? " - Adicional: Queijo" : ""} {doc.doc.data.extraEgg ? " - Adicional: Ovo" : ""}</label>
             </div>
         </React.Fragment>)
 }
