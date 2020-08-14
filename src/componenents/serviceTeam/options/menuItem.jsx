@@ -12,24 +12,15 @@ const MenuItem = (doc) => {
             event.preventDefault();
             let mapOrder = [];
             let addPrice = 0;
-            const target = event.currentTarget;
+            const target = event.target;
             const eventId = target.id;
             const db = firebaseConfig.firestore();
             await db.collection("menu")
                 .doc(event.target.id)
                 .get()
                 .then(function (doc) {
-                    let raw = doc.data();
-                    const {
-                        extraCheese
-                    } = target.elements
-                    raw.extraCheese = extraCheese.checked;
-                    let price = raw.price;
-                    if (raw.extraCheese) {
-                        raw.price = price + 1;
-                    } 
-                    state.order.push({ id: eventId, data: raw });
-                    state.price = state.price + raw.price;
+                    state.order.push({ id: eventId, data: doc.data()});
+                    state.price = state.price + doc.data().price  
                 })
                 .catch(function (error) {
                     console.log("Error getting documents: ", error);
@@ -47,9 +38,7 @@ const MenuItem = (doc) => {
             <div className="options">
                 <form onSubmit={AddItem} id={doc.doc.id} className="checkOptions">
                     <input type="submit" className="menu-checkbox-add" name="menuOptionAdd" value="+" />
-                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00 | `}</label>
-                    <input className="checkbox-extras" name="extraCheese" type="checkbox" />
-                    <label className="menu-label" htmlFor="extraCheese">Queijo</label>
+                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00`}</label>
                 </form>
             </div>
 
