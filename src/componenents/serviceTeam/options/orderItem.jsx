@@ -11,9 +11,10 @@ const OrderItem = (doc) => {
             let removePrice = 0;
             const eventId = event.target.id;
             state.order.pop({ id: eventId, data: doc.doc.data });
+            if (state.price >= 0){ 
             state.price = state.price - doc.doc.data.price;
             mapOrder = state.order.map(doc => React.createElement(OrderItem, { key: doc.id, doc: doc, }))
-            ReactDOM.render(mapOrder, document.getElementById("printOrder"));
+            ReactDOM.render(mapOrder, document.getElementById("printOrder"));}
 
             removePrice = [{price: state.price}].map(doc => React.createElement(Price,{ key: doc.id, doc: doc,}))
             ReactDOM.render(removePrice, document.getElementById("priceOrder"));

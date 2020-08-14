@@ -27,7 +27,7 @@ const MenuItem = (doc) => {
             ReactDOM.render(mapOrder, document.getElementById("printOrder"));
 
             addPrice = [{price: state.price}].map(doc => React.createElement(Price,{ key: doc.id, doc: doc,}))
-            ReactDOM.render(addPrice, document.getElementById("priceOrder"));
+            ReactDOM.render(addPrice , document.getElementById("priceOrder"));
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
@@ -36,7 +36,7 @@ const MenuItem = (doc) => {
             <div className="options">
                 <div className="checkOptions">
                     <input id={doc.doc.id} className="menu-checkbox-add" onClick={AddItem} type="button" name="menuOptionAdd" value="+" />
-                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name}</label>
+                    <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00` }</label>
                 </div>
             </div>
         </React.Fragment>)
