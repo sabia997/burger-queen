@@ -21,19 +21,13 @@ const MenuItem = (doc) => {
                 .then(function (doc) {
                     let raw = doc.data();
                     const {
-                        extraCheese,
-                        extraEgg
+                        extraCheese
                     } = target.elements
                     raw.extraCheese = extraCheese.checked;
-                    raw.extraEgg = extraEgg.checked;
                     let price = raw.price;
                     if (raw.extraCheese) {
                         raw.price = price + 1;
-                    } if (raw.extraEgg) {
-                        raw.price = price + 1;
-                    } if (raw.extraEgg && raw.extraCheese) {
-                        raw.price = price + 2;
-                    }
+                    } 
                     state.order.push({ id: eventId, data: raw });
                     state.price = state.price + raw.price;
                 })
@@ -54,8 +48,6 @@ const MenuItem = (doc) => {
                 <form onSubmit={AddItem} id={doc.doc.id} className="checkOptions">
                     <input type="submit" className="menu-checkbox-add" name="menuOptionAdd" value="+" />
                     <label className="menu-label" htmlFor="menuOptionAdd">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00 | `}</label>
-                    <input className="checkbox-extras" name="extraEgg" type="checkbox" />
-                    <label className="menu-label" htmlFor="extraEgg">Ovo</label>
                     <input className="checkbox-extras" name="extraCheese" type="checkbox" />
                     <label className="menu-label" htmlFor="extraCheese">Queijo</label>
                 </form>

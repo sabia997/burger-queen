@@ -9,7 +9,7 @@ const initialState =
 export const OrderContext = React.createContext(
     {
         state: initialState,
-        actions: { setOrder: () => { } }
+        actions: { setOrder: () => {  } }
     });
 
 const setOrder = (state, setState, order) => {

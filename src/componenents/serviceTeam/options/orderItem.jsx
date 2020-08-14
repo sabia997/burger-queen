@@ -26,7 +26,7 @@ const OrderItem = (doc) => {
             <div className="checkOptions">
                 <input className="menu-checkbox-remove" onClick={RemoveItem} type="button" name="menuOptionSubtract" value="-" />
                 <label className='menuOptionSubtract' htmlFor="menuOptionSubtract">{doc.doc.data.name + ` R$ ${doc.doc.data.price},00`}
-                    {doc.doc.data.extraCheese ? " - Adicional: Queijo" : ""} {doc.doc.data.extraEgg ? " - Adicional: Ovo" : ""}</label>
+                    {doc.doc.data.extraCheese ? " - Adicional: Queijo" : ""}</label>
             </div>
         </React.Fragment>)
 }
