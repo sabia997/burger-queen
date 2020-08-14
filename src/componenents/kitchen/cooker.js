@@ -3,6 +3,7 @@ import firebaseConfig from '../../firebase';
 import ReactDOM from 'react-dom';
 import { slide as Menu } from 'react-burger-menu'
 import OrdersCard from './orderCards';
+import KitchenIcon from './icons/kitchenIcon';
 
 const Cooker = ({ history }) => {
     const handleLogout = useCallback(
@@ -50,7 +51,7 @@ const Cooker = ({ history }) => {
             </header>
             <main>
                 <button name="buttonReload" className="button-reload" onClick={cookerOrders} type="button"></button>
-                <label for="buttonReload" className="label-reload">Atualize pedidos para preparo</label>
+                <label for="buttonReload" className="label-reload">{<KitchenIcon />} Atualize pedidos para preparo </label>
                 <div id="kitchenOrders"></div>
             </main>
         </React.Fragment>

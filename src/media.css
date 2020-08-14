@@ -7,13 +7,13 @@
     justify-content: space-around;
   }
 
-  .menu-option{
+  .menu-option {
     justify-content: space-between;
   }
 
   .menu-options {
-      padding-left: 35px;
-      padding-top: 122px;
+    padding-left: 35px;
+    padding-top: 122px;
   }
 
   .input-request {
@@ -22,12 +22,11 @@
   }
 
   .icon {
-    width:80px;
-    
+    width: 80px;
   }
 
   .order-resume {
-    background-image:url(./request-phone.svg);
+    background-image: url(./request-phone.svg);
     background-repeat: no-repeat;
     width: 522px;
     height: 666px;
@@ -39,7 +38,7 @@
     width: 75px;
     text-align: center;
   }
-
+  
   .input-client-name {
     width: 223px;
   }
@@ -76,7 +75,7 @@
   }
 
   .menu-options {
-      padding-top: 90px;
+    padding-top: 90px;
   }
 
   .input-request {
@@ -90,28 +89,44 @@
   }
 
   .order-resume {
-    background-image:url(./request.svg);
+    background-image: url(./request.svg);
     background-repeat: no-repeat;
     background-size: 100%;
   }
- 
+
   .priceOrder {
-    margin-top:30px;
+    margin-top: 30px;
     width: 30%;
   }
+
   .printOrder {
     height: 470px;
-    overflow:auto; 
-  
+    overflow: auto;
   }
+
   .show-price {
     border-radius: 10px;
     background-color: #cceb80;
-    width:120px ;
+    width: 120px;
     height: 70px;
   }
+
   .button-send-to-kitchen {
     margin-left: 35%;
+  }
+
+  .Modal {
+    font-size: x-large;
+  }
+
+  .modalInstructions {
+    font-size: large;
+  }
+
+  .input-modal {
+    width: 100px;
+    height: 42px;
+    font-size: 12px;
   }
 }
 
@@ -121,7 +136,32 @@
     height: 65px;
     font-size: 10px;
   }
+
   .button-send-to-kitchen {
     margin-left: 25%;
   }
+
+  .Modal {
+    font-size: x-large;
+  }
+
+  .modalInstructions {
+    font-size: large;
+  }
+
+  .input-modal {
+    width: 60px;
+    height: 30px;
+    font-size: 10px;
+  }
 }
+
+  @media screen and (max-width: 700px) {
+    .button-reload {
+      margin-left: 100px;
+    }
+    .label-reload {
+      margin-top: 13px;
+    }
+
+  }

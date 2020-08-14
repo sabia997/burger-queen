@@ -14,7 +14,6 @@ const Order = () => {
         if ((state.order).length === 0 || table === '' || name === '') {
             evt.preventDefault();
             setModalError(true)
-            
         } else {
             evt.preventDefault();
             let orderArray = []
@@ -43,17 +42,21 @@ const Order = () => {
 
     return (
         <React.Fragment>
-            <Modal className='Modal' isOpen={modalError}>
-                <h2>Erro!</h2><br />
-                <p className='modalInstructions'>Preencha todos os campos corretamente!</p><br />
-                <button className='input-order' onClick={() => setModalError(false)}> Entendi!</button>
-            </Modal>
-            <Modal className='Modal' isOpen={modal}>
-                <h2>Pedido enviado! </h2><br />
-                <p className='modalInstructions'>cliente:{name}</p>
-                <p className='modalInstructions'> mesa: {table}</p>
-                <button className='input-order' onClick={() => {setModal(false); window.location.reload()}} > Ok</button>
-            </Modal>
+            <div className="modal-center">
+                <Modal className='Modal' isOpen={modalError}>
+                    <h2>Erro!</h2><br />
+                    <p className='modalInstructions'>Preencha todos os campos corretamente!</p><br />
+                    <button className='input-modal' onClick={() => setModalError(false)}> Entendi!</button>
+                </Modal>
+            </div>
+            <div className="modal-center">
+                <Modal className='Modal' isOpen={modal}>
+                    <h2>Pedido enviado! </h2><br />
+                    <p className='modalInstructions'>cliente:{name}</p>
+                    <p className='modalInstructions'> mesa: {table}</p>
+                    <button className='input-modal' onClick={() => { setModal(false); window.location.reload() }} > Ok</button>
+                </Modal>
+            </div>
             <div className="order-resume">
                 <form>
                     <div className="buttons-client">
@@ -62,10 +65,10 @@ const Order = () => {
                     </div>
                     <div className="printOrder" id="printOrder"></div>
                     <div className='btnSend-price'>
-                    <div className='show-price' id="priceOrder">
-                        <h1 className='total-price'>TOTAL</h1>
-                    </div>
-                    <button type="submit" onClick ={sendOrder} className='button-send-to-kitchen'></button>
+                        <div className='show-price' id="priceOrder">
+                            <h1 className='total-price'>TOTAL</h1>
+                        </div>
+                        <button type="submit" onClick={sendOrder} className='button-send-to-kitchen'></button>
 
                     </div>
                 </form>

@@ -73,6 +73,7 @@
 }
 
 /*Waitress*/
+
 .waitress {
   display: flex;
   flex-direction: inherit;
@@ -99,13 +100,12 @@
 .menu-option {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .icon {
   width: 80px;
-  padding-left: 5%;
+  padding-left: 16px;
 }
 
 .options {
@@ -137,6 +137,26 @@
   border: none;
 }
 
+.button-and-image {
+  display: flex;
+  flex-direction: initial;
+  margin-bottom: 15px;
+}
+
+.checkOptions {
+  padding: 2%;
+}
+
+.menu-checkbox-add {
+  color: #F6F6F6;
+  font-weight: bolder;
+  font-size: large;
+  width: 60px;
+  border-radius: 55px;
+  background-color: #5DB075;
+  border: none;
+}
+
 /* Waitress - Request (Green area)*/
 
 .order-resume {
@@ -151,12 +171,13 @@
 .select-desk-number {
   margin-top: 5%;
   width: 22%;
-  border-color:white;
+  border: none;
   background-color: white;
   color: #5DB075;
   border-radius: 25px;
   font-size: 22px;
   font-weight: bolder;
+  margin-left: 14px;
 }
 
 .input-client-name {
@@ -164,7 +185,7 @@
   margin-left: 20px;
   padding: 2%;
   width: 59%;
-  border-color:white;
+  border: none;
   background-color: white;
   color: #5DB075;
   border-radius: 25px;
@@ -174,7 +195,7 @@
 
 .buttons-client {
   display: flex;
-  flex-direction:initial ;
+  flex-direction: initial;
   justify-content: left;
 }
 
@@ -199,15 +220,15 @@
   height: 469px;
   height: 475px;
   margin-top: 5px;
-  overflow:auto; 
+  overflow: auto;
 }
 
 .priceOrder {
-  margin-top:30px;
+  margin-top: 30px;
   width: 30%;
 }
 
-.btnSend-price{
+.btnSend-price {
   display: flex;
   flex-direction: inherit;
 }
@@ -215,7 +236,7 @@
 .show-price {
   border-radius: 10px;
   background-color: #cceb80;
-  width:120px ;
+  width: 120px;
   height: 70px;
   margin-left: 5%;
 }
@@ -230,7 +251,7 @@
   font-weight: bolder;
 }
 
-.total-price-value{
+.total-price-value {
   padding: 10%;
   font-size: 20px;
   width: 100px;
@@ -249,26 +270,26 @@
   color: #F6F6F6;
   font-weight: bolder;
   font-size: large;
-  width: 26px;
+  width: 60px;
   border-radius: 70px;
   background-color: red;
   border: none;
 }
 
 /*Modal with errors */
+
 .Modal {
-  background-color: White ;
-  margin-top: 245px;
+  margin-right: 25%;
   width: 50%;
+  margin-left: 25%;
+  background-color: White;
+  margin-top: 245px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-left: 10%;
   font-size: xxx-large;
-  width: 560px;
-  padding: 2%;
   font-weight: bolder;
   color: #5cb074;
   border: solid;
@@ -278,14 +299,27 @@
   font-size: xx-large;
 }
 
+.input-modal {
+  width: 200px;
+  height: 82px;
+  background-color: #5DB075;
+  color: white;
+  border: 2px solid;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+}
+
 /* Orders History*/
 
 .total-requests {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 14px;
   color: black;
   border: green;
 }
@@ -297,14 +331,13 @@
   margin-top: 40px;
 }
 
-
 .button-reload {
   background: url('./refresh-button.svg') no-repeat;
   border: 0;
   width: 90px;
   height: 70px;
   cursor: pointer;
-  margin-left: 140px;
+  margin-left: 125px;
   width: 50px;
   margin-top: 25px;
 }
@@ -321,8 +354,10 @@
   justify-content: center;
   margin-bottom: 10px;
   display: flex;
-  margin-left: -180px;
-  margin-top: -44px;
+  align-items: center;
+  margin-top: -72px;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-size: 16px;
 }
 
 .button-submit-status {
@@ -334,4 +369,13 @@
   padding: 1.7%;
   font-size: 12px;
   font-weight: bolder;
+  cursor: pointer;
+}
+
+.list-icon {
+  width: 50px;
+}
+
+.item-order {
+  padding: 5px;
 }
