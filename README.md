@@ -7,8 +7,9 @@ Nossa lanchonete e Cafeteria é vegana, evitando sofrimento animal e trazendo al
 ***
 
 ### Prototipação
-Utilizamos cores da paleta verde, trazendo o conforto da natureza. Nosso protótipo de baixa fidelidade foi feito no figma. 
+Utilizamos cores da paleta verde, trazendo o conforto da natureza. 
 ![](./figma.png)
+Nosso protótipo de baixa fidelidade foi feito no figma.
 ***
 
 ### Técnicos 
