@@ -26,6 +26,7 @@ const OngoingOrders = ({ history }) => {
             let mapData = [];
             event.preventDefault();
             db.collection("client_order").where("status", "==", "ready")
+                .orderBy('date', 'asc')
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
