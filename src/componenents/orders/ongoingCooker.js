@@ -26,12 +26,13 @@ const OngoingOrders = ({ history }) => {
             let mapData = [];
             event.preventDefault();
             db.collection("client_order").where("status", "==", "ready")
+                .orderBy('date', 'asc')
                 .get()
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
                         data.push({ id: doc.id, data: doc.data() })
                     });
-                     mapData = data.map(doc => React.createElement(OngoingCards, {
+                    mapData = data.map(doc => React.createElement(OngoingCards, {
                         key: doc.id,
                         doc: doc,
                     }))
@@ -45,7 +46,7 @@ const OngoingOrders = ({ history }) => {
             <header>
                 <Menu>
                     <button onClick={handleLogout} className='menu-burger-option'>Sair</button>
-                    <button onClick={() => history.push("/kitchen")}className='menu-burger-option'>Cozinha</button>
+                    <button onClick={() => history.push("/kitchen")} className='menu-burger-option'>Cozinha</button>
                     <button onClick={() => history.push("/historyCooker")} className='menu-burger-option'>Histórico</button>
                 </Menu>
             </header>
