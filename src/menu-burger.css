@@ -16,11 +16,11 @@
   /* Position and sizing of burger button */
   .bm-burger-button {
     position: fixed;
-    background-color: honeydew;
-    width: 36px;
+    background-color: transparent;
+    width: 32px;
     height: 30px;
-    left: 36px;
-    top: 36px;
+    left: 14px;
+    top: 25px;
   }
   
   /* Color/shape of burger icon bars */

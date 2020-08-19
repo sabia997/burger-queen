@@ -48,7 +48,7 @@ const SignUp = ({ history }) => {
                 </header>
                 <main>
                     <form onSubmit={handleSignUp} className="login">
-                        <SignUpForm />
+                        <SignUpForm/>
                     </form>
                     <div className="link">
                         <Link className="link" to="/home">Voltar para a página de login</Link>

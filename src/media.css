@@ -13,7 +13,7 @@
 
   .menu-options {
     padding-left: 35px;
-    padding-top: 122px;
+    padding-top: 100px;
   }
 
   .input-request {
@@ -49,6 +49,7 @@
   .button-send-to-kitchen {
     margin-left: 50%;
   }
+
 }
 
 @media screen and (max-width: 657px) {
